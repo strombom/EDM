@@ -17,7 +17,10 @@ $EndDescr
 $Sheet
 S 3900 2850 1400 1300
 U 5A71F0AB
-F0 "Low Voltage Source" 50
-F1 "low_voltage_source.sch" 50
+F0 "Current Source" 50
+F1 "edm_current_source.sch" 50
+F2 "+24V" U L 3900 3150 50 
+F3 "GNDPWR" U L 3900 3300 50 
+F4 "+20V" U R 5300 3150 50 
 $EndSheet
 $EndSCHEMATC
