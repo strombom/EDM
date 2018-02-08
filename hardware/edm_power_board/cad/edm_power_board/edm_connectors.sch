@@ -24,8 +24,9 @@ U 1 1 5A7A474C
 P 5600 2800
 F 0 "J?" H 5650 3317 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 5650 3226 50  0000 C CNN
-F 2 "" H 5600 2800 50  0001 C CNN
-F 3 "~" H 5600 2800 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x08_P1.27mm_Vertical" H 5600 2800 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/302-sxxx.pdf" H 5600 2800 50  0001 C CNN
+F 4 "ED10523-ND" H 5600 2800 50  0001 C CNN "Digikey"
 	1    5600 2800
 	1    0    0    -1  
 $EndComp
@@ -107,8 +108,9 @@ U 1 1 5A7F6FB6
 P 5600 4000
 F 0 "J?" H 5680 3992 50  0000 L CNN
 F 1 "Conn_01x02" H 5680 3901 50  0000 L CNN
-F 2 "" H 5600 4000 50  0001 C CNN
-F 3 "~" H 5600 4000 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5600 4000 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 5600 4000 50  0001 C CNN
+F 4 "ED1609-ND" H 5600 4000 50  0001 C CNN "Digikey"
 	1    5600 4000
 	1    0    0    -1  
 $EndComp
