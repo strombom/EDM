@@ -19,10 +19,10 @@ Text HLabel 5100 4000 0    50   Input ~ 0
 Text HLabel 5100 4100 0    50   Input ~ 0
 GNDPWR
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J?
+L Connector_Generic:Conn_02x08_Odd_Even J501
 U 1 1 5A7A474C
 P 5600 2800
-F 0 "J?" H 5650 3317 50  0000 C CNN
+F 0 "J501" H 5650 3317 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 5650 3226 50  0000 C CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_2x08_P1.27mm_Vertical" H 5600 2800 50  0001 C CNN
 F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/302-sxxx.pdf" H 5600 2800 50  0001 C CNN
@@ -103,10 +103,10 @@ Wire Wire Line
 Wire Wire Line
 	6400 3200 5900 3200
 $Comp
-L Connector_Generic:Conn_01x02 J?
+L Connector_Generic:Conn_01x02 J502
 U 1 1 5A7F6FB6
 P 5600 4000
-F 0 "J?" H 5680 3992 50  0000 L CNN
+F 0 "J502" H 5680 3992 50  0000 L CNN
 F 1 "Conn_01x02" H 5680 3901 50  0000 L CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5600 4000 50  0001 C CNN
 F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 5600 4000 50  0001 C CNN

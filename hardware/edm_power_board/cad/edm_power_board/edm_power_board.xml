@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\development\github\EDM\hardware\edm_power_board\cad\edm_power_board\edm_power_board.sch</source>
-    <date>2018-02-05 01:59:13</date>
+    <date>2018-02-08 23:33:35</date>
     <tool>Eeschema (2018-01-21 revision 81642dddd)-makepkg</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -63,6 +63,19 @@
         <rev/>
         <date/>
         <source>edm_connectors.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/Spark Output/" tstamps="/5A9693D9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>edm_spark_output.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -149,6 +162,10 @@
     </comp>
     <comp ref="C209">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Current Source/" tstamps="/5A71F0AB/"/>
       <tstamp>5A720E81</tstamp>
@@ -300,6 +317,9 @@
       <value>LM5022MM</value>
       <footprint>Package_SSOP:MSOP-10_3x3mm_P0.5mm</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/lm5022.pdf</datasheet>
+      <fields>
+        <field name="Digikey">LM5022MM/NOPBCT-ND</field>
+      </fields>
       <libsource lib="Regulator_Switching" part="LM5022MM"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A728E96</tstamp>
@@ -308,7 +328,7 @@
       <value>27k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="DigiKey">311-27KARCT-ND</field>
+        <field name="DigiKey">311-27.0KCRCT-ND</field>
       </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
@@ -326,24 +346,40 @@
     </comp>
     <comp ref="C302">
       <value>10n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">490-1664-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72AE22</tstamp>
     </comp>
     <comp ref="C304">
       <value>1u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1066-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72AFED</tstamp>
     </comp>
     <comp ref="C305">
-      <value>125n</value>
+      <value>120n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-6518-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72B25D</tstamp>
     </comp>
     <comp ref="C306">
-      <value>530p</value>
+      <value>560p</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">399-3492-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72B2A0</tstamp>
@@ -370,6 +406,10 @@
     </comp>
     <comp ref="C307">
       <value>1n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">399-1147-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A7260D8</tstamp>
@@ -388,6 +428,9 @@
       <value>BSC13DN30NSFD</value>
       <footprint>Package_TO_SOT_SMD:TDSON-8-1</footprint>
       <datasheet>https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a</datasheet>
+      <fields>
+        <field name="Digikey">BSC13DN30NSFDATMA1CT-ND</field>
+      </fields>
       <libsource lib="Transistor_FET" part="BSC13DN30NSFD"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72611C</tstamp>
@@ -400,6 +443,10 @@
     </comp>
     <comp ref="R315">
       <value>150m</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric</footprint>
+      <fields>
+        <field name="DigiKey">311-0.15TCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72934D</tstamp>
@@ -408,6 +455,9 @@
       <value>S2JTR</value>
       <footprint>Diode_SMD:D_SMB</footprint>
       <datasheet>http://www.smc-diodes.com/propdf/S2A-S2M%20N0562%20REV.A.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1655-1739-1-ND</field>
+      </fields>
       <libsource lib="Diode" part="S2JTR"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A72AF3D</tstamp>
@@ -436,25 +486,12 @@
       <value>BSS214NW</value>
       <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
       <datasheet>https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde</datasheet>
+      <fields>
+        <field name="Digikey">BSS214NWH6327XTSA1CT-ND</field>
+      </fields>
       <libsource lib="Transistor_FET" part="BSS214NW"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A73A9AC</tstamp>
-    </comp>
-    <comp ref="Q303">
-      <value>BSS214NW</value>
-      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
-      <datasheet>https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde</datasheet>
-      <libsource lib="Transistor_FET" part="BSS214NW"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A73AA8E</tstamp>
-    </comp>
-    <comp ref="Q304">
-      <value>BSS214NW</value>
-      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
-      <datasheet>https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde</datasheet>
-      <libsource lib="Transistor_FET" part="BSS214NW"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A73C6BD</tstamp>
     </comp>
     <comp ref="R313">
       <value>523R</value>
@@ -470,52 +507,38 @@
       <value>180R</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="DigiKey">541-180CCT-ND</field>
+        <field name="DigiKey">311-180CRCT-ND</field>
       </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A740FFD</tstamp>
     </comp>
     <comp ref="C308">
-      <value>1u</value>
+      <value>470n</value>
+      <footprint>Capacitor_SMD:C_1812_4532Metric</footprint>
+      <fields>
+        <field name="Digikey">445-13461-2-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A79A138</tstamp>
     </comp>
-    <comp ref="C309">
-      <value>1u</value>
-      <libsource lib="Device" part="C"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A79A38A</tstamp>
-    </comp>
-    <comp ref="C310">
-      <value>56u</value>
-      <libsource lib="Device" part="CP"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A79A47C</tstamp>
-    </comp>
-    <comp ref="C311">
-      <value>56u</value>
-      <libsource lib="Device" part="CP"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A79A87E</tstamp>
-    </comp>
-    <comp ref="U302">
-      <value>Si8641xx-x-xS1</value>
-      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
-      <datasheet>https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf</datasheet>
-      <libsource lib="Isolator" part="Si8641xx-x-xS1"/>
-      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
-      <tstamp>5A77C6A8</tstamp>
-    </comp>
     <comp ref="C303">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1066-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A795505</tstamp>
     </comp>
     <comp ref="C301">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1066-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A7A725E</tstamp>
@@ -534,21 +557,31 @@
       <value>93k1</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <fields>
-        <field name="DigiKey">311-93.1KFRCT-ND</field>
+        <field name="DigiKey">311-93.1KCRCT-ND</field>
       </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A7DF695</tstamp>
     </comp>
     <comp ref="D301">
-      <value>5V1</value>
+      <value>4V7</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds18004.pdf</datasheet>
+      <fields>
+        <field name="Mfg part">BZT52C4V7-13-F</field>
+        <field name="Digikey">BZT52C4V7-13FDICT-ND</field>
+      </fields>
       <libsource lib="Device" part="D_Zener"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A808952</tstamp>
     </comp>
     <comp ref="U304">
       <value>LM311</value>
-      <datasheet>http://www.ti.com/lit/ds/symlink/lm311.pdf</datasheet>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm311-n.pdf</datasheet>
+      <fields>
+        <field name="Digikey">LM311MX/NOPBCT-ND</field>
+      </fields>
       <libsource lib="Comparator" part="LM311"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A827313</tstamp>
@@ -557,7 +590,7 @@
       <value>27k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
-        <field name="DigiKey">311-27KARCT-ND</field>
+        <field name="DigiKey">311-27.0KCRCT-ND</field>
       </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
@@ -576,7 +609,7 @@
       <value>93k1</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <fields>
-        <field name="DigiKey">311-93.1KFRCT-ND</field>
+        <field name="DigiKey">311-93.1KCRCT-ND</field>
       </fields>
       <libsource lib="Device" part="R"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
@@ -604,6 +637,7 @@
     </comp>
     <comp ref="R303">
       <value>84k5</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <fields>
         <field name="DigiKey">311-84.5KCRCT-ND</field>
       </fields>
@@ -611,31 +645,588 @@
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
       <tstamp>5A9A0CCA</tstamp>
     </comp>
+    <comp ref="U302">
+      <value>Si8641BB-B-IS1</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf</datasheet>
+      <fields>
+        <field name="Digikey">336-2566-ND</field>
+      </fields>
+      <libsource lib="Isolator" part="Si8641BB-B-IS1"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A79F1F6</tstamp>
+    </comp>
+    <comp ref="C309">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1066-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A7D76CF</tstamp>
+    </comp>
+    <comp ref="C310">
+      <value>470n</value>
+      <footprint>Capacitor_SMD:C_1812_4532Metric</footprint>
+      <fields>
+        <field name="Digikey">445-13461-2-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A834325</tstamp>
+    </comp>
+    <comp ref="C313">
+      <value>470n</value>
+      <footprint>Capacitor_SMD:C_1812_4532Metric</footprint>
+      <fields>
+        <field name="Digikey">445-13461-2-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A8E5143</tstamp>
+    </comp>
+    <comp ref="C311">
+      <value>25u</value>
+      <footprint>Capacitor_THT:C_Rect_L41.5mm_W20.0mm_P37.50mm_MKS4</footprint>
+      <fields>
+        <field name="Digikey">P15874-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A8E5211</tstamp>
+    </comp>
+    <comp ref="C312">
+      <value>25u</value>
+      <footprint>Capacitor_THT:C_Rect_L41.5mm_W20.0mm_P37.50mm_MKS4</footprint>
+      <fields>
+        <field name="Digikey">P15874-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A8EE597</tstamp>
+    </comp>
+    <comp ref="Q303">
+      <value>BSS214NW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde</datasheet>
+      <fields>
+        <field name="Digikey">BSS214NWH6327XTSA1CT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS214NW"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A8EEB3B</tstamp>
+    </comp>
+    <comp ref="Q304">
+      <value>BSS214NW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde</datasheet>
+      <fields>
+        <field name="Digikey">BSS214NWH6327XTSA1CT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS214NW"/>
+      <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
+      <tstamp>5A8EEBB1</tstamp>
+    </comp>
     <comp ref="U401">
       <value>L78L05_SO8</value>
       <footprint>Package_SOIC:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
       <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf</datasheet>
+      <fields>
+        <field name="Digikey">497-1182-1-ND</field>
+      </fields>
       <libsource lib="Regulator_Linear" part="L78L05_SO8"/>
       <sheetpath names="/Power Supply/" tstamps="/5A73A880/"/>
       <tstamp>5A73A8F1</tstamp>
     </comp>
     <comp ref="C401">
       <value>330n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-6813-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Power Supply/" tstamps="/5A73A880/"/>
       <tstamp>5A73AA04</tstamp>
     </comp>
     <comp ref="C402">
       <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Power Supply/" tstamps="/5A73A880/"/>
       <tstamp>5A73AADF</tstamp>
     </comp>
     <comp ref="C403">
       <value>1u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1066-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Power Supply/" tstamps="/5A73A880/"/>
       <tstamp>5A73B168</tstamp>
+    </comp>
+    <comp ref="J501">
+      <value>Conn_02x08_Odd_Even</value>
+      <footprint>Connector_PinHeader_1.27mm:PinHeader_2x08_P1.27mm_Vertical</footprint>
+      <datasheet>http://www.on-shore.com/wp-content/uploads/2015/09/302-sxxx.pdf</datasheet>
+      <fields>
+        <field name="Digikey">ED10523-ND</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x08_Odd_Even"/>
+      <sheetpath names="/Connectors/" tstamps="/5A73A88E/"/>
+      <tstamp>5A7A474C</tstamp>
+    </comp>
+    <comp ref="J502">
+      <value>Conn_01x02</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
+      <datasheet>http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf</datasheet>
+      <fields>
+        <field name="Digikey">ED1609-ND</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02"/>
+      <sheetpath names="/Connectors/" tstamps="/5A73A88E/"/>
+      <tstamp>5A7F6FB6</tstamp>
+    </comp>
+    <comp ref="Q601">
+      <value>IPD50R3K0CE</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>https://www.infineon.com/dgdl/IPx50R3K0CE_2_0.pdf?folderId=db3a3043163797a6011637d4bae7003b&amp;fileId=db3a304339dcf4b10139e7e9ff592ce4</datasheet>
+      <fields>
+        <field name="Digikey">IPD50R3K0CEAUMA1CT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="IPD50R3K0CE"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A969417</tstamp>
+    </comp>
+    <comp ref="Q602">
+      <value>IPD50R380CE</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>https://www.infineon.com/dgdl/Infineon-IPD50R380CE-DS-v02_01-en.pdf?fileId=db3a30433ecb86d4013ed0a2ef580f38</datasheet>
+      <fields>
+        <field name="Mouser">726-IPD50R380CEAUMA1</field>
+        <field name="Farnell">2709943</field>
+        <field name="Digikey">IPD50R380CEAUMA1CT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="IPD50R380CE"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A9694E1</tstamp>
+    </comp>
+    <comp ref="U603">
+      <value>FAN7371</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FA/FAN7371.pdf</datasheet>
+      <fields>
+        <field name="Mouser">512-FAN7371MX</field>
+        <field name="Digikey">FAN7371MXDKR-ND</field>
+      </fields>
+      <libsource lib="Driver_FET" part="FAN7371"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A9696FA</tstamp>
+    </comp>
+    <comp ref="C601">
+      <value>330n</value>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A969FE8</tstamp>
+    </comp>
+    <comp ref="C604">
+      <value>1u</value>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A96A0C7</tstamp>
+    </comp>
+    <comp ref="R604">
+      <value>5R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A32D3</tstamp>
+    </comp>
+    <comp ref="R603">
+      <value>4k7</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A3492</tstamp>
+    </comp>
+    <comp ref="C607">
+      <value>470n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1074-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A37C7</tstamp>
+    </comp>
+    <comp ref="R601">
+      <value>5R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A4758</tstamp>
+    </comp>
+    <comp ref="D601">
+      <value>RS1MTR</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>http://www.smc-diodes.com/propdf/RS1A-RS1M%20N0988%20REV.B.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1655-1501-1-ND</field>
+        <field name="trr">500ns</field>
+        <field name="Vf">1,3V @ 1A</field>
+        <field name="Vr">1000V</field>
+      </fields>
+      <libsource lib="Device" part="D"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A5146</tstamp>
+    </comp>
+    <comp ref="C606">
+      <value>10u</value>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A78F8</tstamp>
+    </comp>
+    <comp ref="C609">
+      <value>10u</value>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7A7945</tstamp>
+    </comp>
+    <comp ref="D602">
+      <value>VS-15EWL06FNTR-M3</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.taiwansemi.com/products/datasheet/S5GB%20SERIES_C1701.pdf</datasheet>
+      <fields>
+        <field name="Digikey">VS-15EWL06FNTR-M3CT-ND</field>
+        <field name="Vf">1.05V @ 15A</field>
+        <field name="Vr">600V</field>
+        <field name="Io">15A</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7AE8A7</tstamp>
+    </comp>
+    <comp ref="U601">
+      <value>Si8642BB-B-IS</value>
+      <footprint>Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</footprint>
+      <datasheet>https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf</datasheet>
+      <fields>
+        <field name="Digikey">SI8642BB-B-IS-ND</field>
+      </fields>
+      <libsource lib="Isolator" part="Si8642BB-B-IS"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7B197A</tstamp>
+    </comp>
+    <comp ref="U605">
+      <value>LM311</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm311.pdf</datasheet>
+      <fields>
+        <field name="Digikey">LM311MX/NOPBCT-ND</field>
+      </fields>
+      <libsource lib="Comparator" part="LM311"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7BD6C6</tstamp>
+    </comp>
+    <comp ref="R606">
+      <value>21k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7BE2D6</tstamp>
+    </comp>
+    <comp ref="R610">
+      <value>27k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7C0351</tstamp>
+    </comp>
+    <comp ref="R611">
+      <value>84k5</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7CE7E8</tstamp>
+    </comp>
+    <comp ref="C603">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A7FA95D</tstamp>
+    </comp>
+    <comp ref="R614">
+      <value>93k1</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A81F455</tstamp>
+    </comp>
+    <comp ref="R613">
+      <value>93k1</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A81F4DA</tstamp>
+    </comp>
+    <comp ref="U604">
+      <value>FAN7371</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FA/FAN7371.pdf</datasheet>
+      <fields>
+        <field name="Mouser">512-FAN7371MX</field>
+        <field name="Digikey">FAN7371MXDKR-ND</field>
+      </fields>
+      <libsource lib="Driver_FET" part="FAN7371"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A83AD77</tstamp>
+    </comp>
+    <comp ref="C614">
+      <value>470n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">1276-1074-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A83E48E</tstamp>
+    </comp>
+    <comp ref="R609">
+      <value>5R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A84FC1F</tstamp>
+    </comp>
+    <comp ref="R608">
+      <value>4k7</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A84FCDC</tstamp>
+    </comp>
+    <comp ref="R605">
+      <value>5R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A857248</tstamp>
+    </comp>
+    <comp ref="R615">
+      <value>21k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A86EEBD</tstamp>
+    </comp>
+    <comp ref="R616">
+      <value>27k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A86EEC5</tstamp>
+    </comp>
+    <comp ref="R617">
+      <value>27k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A86EED3</tstamp>
+    </comp>
+    <comp ref="R620">
+      <value>93k1</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A86EF08</tstamp>
+    </comp>
+    <comp ref="D604">
+      <value>4V7</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds18004.pdf</datasheet>
+      <fields>
+        <field name="Digikey">BZT52C4V7-13FDICT-ND</field>
+        <field name="Mfg part">BZT52C4V7-13-F</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A80C95B</tstamp>
+    </comp>
+    <comp ref="R602">
+      <value>47R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A8D3746</tstamp>
+    </comp>
+    <comp ref="R607">
+      <value>47R</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A8F8CD1</tstamp>
+    </comp>
+    <comp ref="D605">
+      <value>VS-15EWL06FNTR-M3</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>http://www.taiwansemi.com/products/datasheet/S5GB%20SERIES_C1701.pdf</datasheet>
+      <fields>
+        <field name="Digikey">VS-15EWL06FNTR-M3CT-ND</field>
+        <field name="Vf">1.05V @ 15A</field>
+        <field name="Vr">600V</field>
+        <field name="Io">15A</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A919533</tstamp>
+    </comp>
+    <comp ref="D603">
+      <value>RS1MTR</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>http://www.smc-diodes.com/propdf/RS1A-RS1M%20N0988%20REV.B.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1655-1501-1-ND</field>
+        <field name="trr">500ns</field>
+        <field name="Vf">1,3V @ 1A</field>
+        <field name="Vr">1000V</field>
+      </fields>
+      <libsource lib="Device" part="D"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A97747B</tstamp>
+    </comp>
+    <comp ref="U606">
+      <value>LM311</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm311.pdf</datasheet>
+      <fields>
+        <field name="Digikey">LM311MX/NOPBCT-ND</field>
+      </fields>
+      <libsource lib="Comparator" part="LM311"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A9813C6</tstamp>
+    </comp>
+    <comp ref="U602">
+      <value>L7815</value>
+      <footprint>Package_TO_SOT_SMD:TO-263-2</footprint>
+      <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</datasheet>
+      <fields>
+        <field name="Digikey">497-1179-1-ND</field>
+        <field name="Mfg part">L7815CD2T-TR</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="L7815"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A98C776</tstamp>
+    </comp>
+    <comp ref="D606">
+      <value>4V7</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds18004.pdf</datasheet>
+      <fields>
+        <field name="Digikey">BZT52C4V7-13FDICT-ND</field>
+        <field name="Mfg part">BZT52C4V7-13-F</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A9BCBBF</tstamp>
+    </comp>
+    <comp ref="C605">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A8075C5</tstamp>
+    </comp>
+    <comp ref="C608">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A807647</tstamp>
+    </comp>
+    <comp ref="C610">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A8076BB</tstamp>
+    </comp>
+    <comp ref="C612">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A807845</tstamp>
+    </comp>
+    <comp ref="C602">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A8078BF</tstamp>
+    </comp>
+    <comp ref="C611">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A80796F</tstamp>
+    </comp>
+    <comp ref="C613">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Digikey">445-1418-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A807A0B</tstamp>
+    </comp>
+    <comp ref="R619">
+      <value>93k1</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A914430</tstamp>
+    </comp>
+    <comp ref="RV602">
+      <value>250k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_3314G_Horizontal</footprint>
+      <fields>
+        <field name="Digikey">3314G-254ECT-ND</field>
+      </fields>
+      <libsource lib="Device" part="POT"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A91467D</tstamp>
+    </comp>
+    <comp ref="RV601">
+      <value>50k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_3314G_Horizontal</footprint>
+      <fields>
+        <field name="Digikey">3314G-503ECT-ND</field>
+      </fields>
+      <libsource lib="Device" part="POT"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A98527B</tstamp>
+    </comp>
+    <comp ref="R618">
+      <value>10k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A98F145</tstamp>
+    </comp>
+    <comp ref="R612">
+      <value>10k</value>
+      <libsource lib="Device" part="R"/>
+      <sheetpath names="/Spark Output/" tstamps="/5A9693D9/"/>
+      <tstamp>5A9A1DF5</tstamp>
     </comp>
   </components>
   <libparts>
@@ -705,6 +1296,88 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x08_Odd_Even">
+      <description>Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x08_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="D_Zener">
       <description>Zener Diode</description>
       <docs>~</docs>
@@ -724,6 +1397,49 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Driver_FET" part="FAN7371">
+      <description>High-Current High-Side Gate Driver, 600V Vs, 4A Io, SOIC-8</description>
+      <docs>https://www.fairchildsemi.com/datasheets/FA/FAN7371.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">FAN7371</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="IN" type="input"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="NC" type="NotConnected"/>
+        <pin num="6" name="VS" type="output"/>
+        <pin num="7" name="HO" type="output"/>
+        <pin num="8" name="VB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="IPD50R380CE">
+      <aliases>
+        <alias>IPD50R3K0CE</alias>
+        <alias>QM6006D</alias>
+      </aliases>
+      <description>14.1A Id, 500V Vds, CoolMOS N-Channel Power MOSFET, 380mOhm Ron, 24.8nC Qg (typ), TO-252-2</description>
+      <docs>https://www.infineon.com/dgdl/Infineon-IPD50R380CE-DS-v02_01-en.pdf?fileId=db3a30433ecb86d4013ed0a2ef580f38</docs>
+      <footprints>
+        <fp>TO?252?2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IPD50R380CE</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-252-2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="L">
       <description>Inductor</description>
       <docs>~</docs>
@@ -740,6 +1456,34 @@
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="L7805">
+      <aliases>
+        <alias>L7806</alias>
+        <alias>L7808</alias>
+        <alias>L7885</alias>
+        <alias>L7809</alias>
+        <alias>L7812</alias>
+        <alias>L7815</alias>
+        <alias>L7818</alias>
+        <alias>L7824</alias>
+      </aliases>
+      <description>Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252</description>
+      <docs>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</docs>
+      <footprints>
+        <fp>TO?252*</fp>
+        <fp>TO?263*</fp>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">L7805</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
       </pins>
     </libpart>
     <libpart lib="Regulator_Switching" part="LM25085MM">
@@ -883,6 +1627,22 @@
         <pin num="8" name="IN" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="POT">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <docs>~</docs>
@@ -941,15 +1701,19 @@
         <pin num="3" name="S" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Isolator" part="Si8641xx-x-xS1">
-      <description>Low-Power Quad-Channel Digital Isolator, 150Mbps, 2.5-5.5V, SOIC-16</description>
+    <libpart lib="Isolator" part="Si8641BB-B-IS1">
+      <aliases>
+        <alias>Si8641BC-B-IS1</alias>
+        <alias>Si8641EC-B-IS1</alias>
+      </aliases>
+      <description>Low-Power Quad-Channel Digital Isolator, 150Mbps, 2.5-5.5V, 2.5kV isolation, Fail-Safe Low, SOIC-16</description>
       <docs>https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf</docs>
       <footprints>
         <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">Si8641xx-x-xS1</field>
+        <field name="Value">Si8641BB-B-IS1</field>
         <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
       </fields>
       <pins>
@@ -965,6 +1729,42 @@
         <pin num="10" name="EN2" type="input"/>
         <pin num="11" name="B4" type="input"/>
         <pin num="12" name="B3" type="output"/>
+        <pin num="13" name="B2" type="output"/>
+        <pin num="14" name="B1" type="output"/>
+        <pin num="15" name="GND2" type="power_in"/>
+        <pin num="16" name="VDD2" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="Si8642BB-B-IS">
+      <aliases>
+        <alias>Si8642BD-B-IS</alias>
+        <alias>Si8642ED-B-IS</alias>
+        <alias>Si8642BD-B-IS2</alias>
+        <alias>Si8642ED-B-IS2</alias>
+      </aliases>
+      <description>Low-Power Quad-Channel Digital Isolator, 150Mbps, 2.5-5.5V, 2.5kV isolation, Fail-Safe Low, SOIC-16W</description>
+      <docs>https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf</docs>
+      <footprints>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Si8642BB-B-IS</field>
+        <field name="Footprint">Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD1" type="power_in"/>
+        <pin num="2" name="GND1" type="power_in"/>
+        <pin num="3" name="A1" type="input"/>
+        <pin num="4" name="A2" type="input"/>
+        <pin num="5" name="A3" type="output"/>
+        <pin num="6" name="A4" type="output"/>
+        <pin num="7" name="EN1" type="input"/>
+        <pin num="8" name="GND1" type="passive"/>
+        <pin num="9" name="GND2" type="passive"/>
+        <pin num="10" name="EN2" type="input"/>
+        <pin num="11" name="B4" type="input"/>
+        <pin num="12" name="B3" type="input"/>
         <pin num="13" name="B2" type="output"/>
         <pin num="14" name="B1" type="output"/>
         <pin num="15" name="GND2" type="power_in"/>
@@ -994,13 +1794,19 @@
       <uri>C:/development/kicad/kicad-symbols/Amplifier_Operational.lib</uri>
     </library>
     <library logical="Comparator">
-      <uri>C:\development\kicad\kicad-symbols\Comparator.lib</uri>
+      <uri>C:/development/kicad/kicad-symbols/Comparator.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:/development/kicad/kicad-symbols/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
       <uri>C:/development/kicad/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="Diode">
       <uri>C:/development/kicad/kicad-symbols/Diode.lib</uri>
+    </library>
+    <library logical="Driver_FET">
+      <uri>C:/development/kicad/kicad-symbols/Driver_FET.lib</uri>
     </library>
     <library logical="Isolator">
       <uri>C:/development/kicad/kicad-symbols/Isolator.lib</uri>
@@ -1020,329 +1826,574 @@
   </libraries>
   <nets>
     <net code="1" name="+24V">
-      <node ref="C202" pin="1"/>
       <node ref="U201" pin="5"/>
-      <node ref="C207" pin="1"/>
-      <node ref="R208" pin="1"/>
-      <node ref="C208" pin="1"/>
-      <node ref="U301" pin="8"/>
-      <node ref="C205" pin="1"/>
-      <node ref="R203" pin="1"/>
-      <node ref="C203" pin="1"/>
+      <node ref="U303" pin="1"/>
+      <node ref="R301" pin="1"/>
+      <node ref="L301" pin="1"/>
+      <node ref="C202" pin="1"/>
+      <node ref="J502" pin="1"/>
       <node ref="R209" pin="1"/>
-    </net>
-    <net code="4" name="/Power Supply/+5V">
-      <node ref="C403" pin="1"/>
-      <node ref="U401" pin="1"/>
-      <node ref="C402" pin="1"/>
-    </net>
-    <net code="5" name="/Power Supply/+24V">
-      <node ref="C401" pin="1"/>
+      <node ref="C203" pin="1"/>
+      <node ref="R203" pin="1"/>
+      <node ref="C205" pin="1"/>
+      <node ref="U301" pin="8"/>
+      <node ref="C208" pin="1"/>
+      <node ref="R208" pin="1"/>
+      <node ref="C207" pin="1"/>
       <node ref="U401" pin="8"/>
+      <node ref="C401" pin="1"/>
     </net>
-    <net code="6" name="+3V3">
-      <node ref="U302" pin="7"/>
-      <node ref="U302" pin="1"/>
-      <node ref="C301" pin="1"/>
+    <net code="2" name="/Connectors/Output_250V_Enable">
+      <node ref="J501" pin="2"/>
+      <node ref="U601" pin="3"/>
     </net>
-    <net code="7" name="GND">
-      <node ref="C301" pin="2"/>
+    <net code="3" name="/Connectors/Output_20V_Enable">
+      <node ref="U601" pin="4"/>
+      <node ref="J501" pin="4"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="U601" pin="2"/>
       <node ref="U302" pin="8"/>
-      <node ref="U201" pin="2"/>
       <node ref="U302" pin="2"/>
+      <node ref="J501" pin="9"/>
+      <node ref="J501" pin="11"/>
+      <node ref="J501" pin="13"/>
+      <node ref="J501" pin="15"/>
+      <node ref="U601" pin="8"/>
+      <node ref="C603" pin="2"/>
+      <node ref="C301" pin="2"/>
+      <node ref="J501" pin="7"/>
+      <node ref="J501" pin="3"/>
       <node ref="C211" pin="2"/>
+      <node ref="J501" pin="5"/>
+      <node ref="U201" pin="2"/>
     </net>
-    <net code="8" name="+5V">
-      <node ref="U302" pin="16"/>
-      <node ref="U302" pin="10"/>
-      <node ref="C303" pin="1"/>
+    <net code="5" name="+5V">
       <node ref="R306" pin="1"/>
+      <node ref="C303" pin="1"/>
       <node ref="U304" pin="8"/>
       <node ref="R304" pin="1"/>
-    </net>
-    <net code="9" name="/Spark Voltage Source/+250V">
-      <node ref="D302" pin="1"/>
-      <node ref="R317" pin="1"/>
-      <node ref="C308" pin="1"/>
+      <node ref="U302" pin="10"/>
+      <node ref="U302" pin="16"/>
       <node ref="C309" pin="1"/>
-      <node ref="C310" pin="1"/>
-      <node ref="C311" pin="1"/>
-      <node ref="R310" pin="1"/>
+      <node ref="U401" pin="1"/>
+      <node ref="C403" pin="1"/>
+      <node ref="C402" pin="1"/>
+      <node ref="R610" pin="2"/>
+      <node ref="U606" pin="8"/>
+      <node ref="C605" pin="1"/>
+      <node ref="C608" pin="1"/>
+      <node ref="U601" pin="10"/>
+      <node ref="U601" pin="16"/>
+      <node ref="U605" pin="8"/>
+      <node ref="R606" pin="2"/>
+      <node ref="C610" pin="1"/>
+      <node ref="C612" pin="1"/>
+      <node ref="R615" pin="2"/>
+      <node ref="R616" pin="2"/>
     </net>
-    <net code="10" name="GNDPWR">
-      <node ref="R307" pin="2"/>
-      <node ref="C303" pin="2"/>
-      <node ref="R312" pin="2"/>
-      <node ref="C402" pin="2"/>
-      <node ref="C401" pin="2"/>
-      <node ref="U401" pin="7"/>
-      <node ref="U401" pin="6"/>
-      <node ref="U401" pin="3"/>
-      <node ref="U401" pin="2"/>
+    <net code="6" name="GNDPWR">
+      <node ref="R308" pin="2"/>
+      <node ref="Q301" pin="2"/>
+      <node ref="C308" pin="2"/>
+      <node ref="R611" pin="1"/>
+      <node ref="U601" pin="9"/>
+      <node ref="R303" pin="2"/>
       <node ref="U302" pin="9"/>
-      <node ref="C403" pin="2"/>
       <node ref="U302" pin="15"/>
-      <node ref="C304" pin="2"/>
-      <node ref="C310" pin="2"/>
+      <node ref="C311" pin="2"/>
+      <node ref="C312" pin="2"/>
+      <node ref="Q303" pin="2"/>
+      <node ref="Q304" pin="2"/>
+      <node ref="C309" pin="2"/>
       <node ref="U303" pin="6"/>
       <node ref="R302" pin="2"/>
       <node ref="C302" pin="2"/>
+      <node ref="C304" pin="2"/>
+      <node ref="U605" pin="4"/>
       <node ref="R315" pin="2"/>
+      <node ref="U605" pin="1"/>
       <node ref="C307" pin="2"/>
-      <node ref="C308" pin="2"/>
-      <node ref="C309" pin="2"/>
-      <node ref="U304" pin="1"/>
-      <node ref="U304" pin="4"/>
-      <node ref="R303" pin="2"/>
-      <node ref="R308" pin="2"/>
-      <node ref="Q304" pin="2"/>
-      <node ref="Q303" pin="2"/>
-      <node ref="Q301" pin="2"/>
-      <node ref="D301" pin="2"/>
-      <node ref="D202" pin="2"/>
+      <node ref="R612" pin="1"/>
+      <node ref="J502" pin="2"/>
+      <node ref="R618" pin="1"/>
+      <node ref="C613" pin="2"/>
+      <node ref="U606" pin="1"/>
+      <node ref="U606" pin="4"/>
+      <node ref="C609" pin="2"/>
+      <node ref="C606" pin="2"/>
+      <node ref="U601" pin="15"/>
+      <node ref="D604" pin="2"/>
+      <node ref="U604" pin="4"/>
+      <node ref="R617" pin="1"/>
+      <node ref="C611" pin="2"/>
+      <node ref="C602" pin="2"/>
+      <node ref="C612" pin="2"/>
+      <node ref="C610" pin="2"/>
+      <node ref="C608" pin="2"/>
+      <node ref="C605" pin="2"/>
+      <node ref="D606" pin="2"/>
+      <node ref="U602" pin="2"/>
+      <node ref="C402" pin="2"/>
+      <node ref="C403" pin="2"/>
+      <node ref="U603" pin="4"/>
+      <node ref="C401" pin="2"/>
+      <node ref="C604" pin="2"/>
+      <node ref="U401" pin="7"/>
+      <node ref="U401" pin="6"/>
+      <node ref="U401" pin="3"/>
+      <node ref="C601" pin="2"/>
+      <node ref="U401" pin="2"/>
+      <node ref="D201" pin="3"/>
+      <node ref="C303" pin="2"/>
+      <node ref="R312" pin="2"/>
+      <node ref="C202" pin="2"/>
+      <node ref="C201" pin="2"/>
+      <node ref="R201" pin="2"/>
+      <node ref="R212" pin="2"/>
+      <node ref="R307" pin="2"/>
       <node ref="R219" pin="2"/>
       <node ref="R216" pin="2"/>
-      <node ref="D201" pin="3"/>
+      <node ref="D202" pin="2"/>
       <node ref="C205" pin="2"/>
       <node ref="C203" pin="2"/>
       <node ref="U301" pin="4"/>
-      <node ref="C201" pin="2"/>
-      <node ref="R201" pin="2"/>
-      <node ref="C202" pin="2"/>
-      <node ref="C311" pin="2"/>
-      <node ref="R212" pin="2"/>
+      <node ref="C310" pin="2"/>
+      <node ref="U304" pin="4"/>
+      <node ref="U304" pin="1"/>
+      <node ref="D301" pin="2"/>
     </net>
-    <net code="11" name="/Spark Voltage Source/+24V">
-      <node ref="L301" pin="1"/>
-      <node ref="U303" pin="1"/>
-      <node ref="R301" pin="1"/>
+    <net code="7" name="+3V3">
+      <node ref="U302" pin="7"/>
+      <node ref="U302" pin="1"/>
+      <node ref="J501" pin="1"/>
+      <node ref="C301" pin="1"/>
+      <node ref="U601" pin="7"/>
+      <node ref="C603" pin="1"/>
+      <node ref="U601" pin="1"/>
+    </net>
+    <net code="8" name="/Connectors/Spark_Voltage_2">
+      <node ref="J501" pin="14"/>
+      <node ref="U302" pin="5"/>
+    </net>
+    <net code="9" name="/Connectors/Short_Circuit">
+      <node ref="U601" pin="5"/>
+      <node ref="J501" pin="6"/>
+    </net>
+    <net code="10" name="/Connectors/Spark_Voltage_Status">
+      <node ref="U302" pin="6"/>
+      <node ref="J501" pin="16"/>
+    </net>
+    <net code="11" name="/Connectors/Spark_Voltage_1">
+      <node ref="U302" pin="4"/>
+      <node ref="J501" pin="12"/>
+    </net>
+    <net code="12" name="/Spark Output/+250V">
+      <node ref="R317" pin="1"/>
+      <node ref="C308" pin="1"/>
+      <node ref="Q601" pin="2"/>
+      <node ref="R310" pin="1"/>
+      <node ref="D302" pin="1"/>
+      <node ref="C311" pin="1"/>
+      <node ref="C312" pin="1"/>
+      <node ref="C310" pin="1"/>
     </net>
     <net code="13" name="/Current Source/+20V">
+      <node ref="Q602" pin="2"/>
       <node ref="R217" pin="1"/>
       <node ref="R218" pin="1"/>
     </net>
-    <net code="14" name="Net-(C206-Pad2)">
+    <net code="14" name="/Connectors/Breakdown">
+      <node ref="U601" pin="6"/>
+      <node ref="J501" pin="8"/>
+    </net>
+    <net code="15" name="/Connectors/Spark_Voltage_0">
+      <node ref="J501" pin="10"/>
+      <node ref="U302" pin="3"/>
+    </net>
+    <net code="16" name="Net-(C206-Pad2)">
       <node ref="R204" pin="1"/>
-      <node ref="C206" pin="2"/>
       <node ref="D201" pin="2"/>
+      <node ref="C206" pin="2"/>
     </net>
-    <net code="15" name="Net-(C206-Pad1)">
-      <node ref="C206" pin="1"/>
+    <net code="17" name="Net-(C206-Pad1)">
       <node ref="R205" pin="2"/>
+      <node ref="C206" pin="1"/>
     </net>
-    <net code="16" name="Net-(D201-Pad1)">
+    <net code="18" name="Net-(D201-Pad1)">
       <node ref="R205" pin="1"/>
       <node ref="D201" pin="1"/>
       <node ref="R206" pin="2"/>
     </net>
-    <net code="17" name="Net-(C204-Pad1)">
-      <node ref="C204" pin="1"/>
+    <net code="19" name="Net-(C204-Pad1)">
+      <node ref="R202" pin="1"/>
       <node ref="U201" pin="4"/>
       <node ref="R204" pin="2"/>
-      <node ref="R202" pin="1"/>
-    </net>
-    <net code="18" name="Net-(C201-Pad1)">
-      <node ref="U201" pin="1"/>
-      <node ref="R213" pin="2"/>
-      <node ref="R201" pin="1"/>
-      <node ref="C201" pin="1"/>
-    </net>
-    <net code="19" name="Net-(R206-Pad1)">
-      <node ref="R206" pin="1"/>
-      <node ref="R207" pin="2"/>
-      <node ref="U301" pin="5"/>
+      <node ref="C204" pin="1"/>
     </net>
     <net code="20" name="Net-(R213-Pad1)">
+      <node ref="R213" pin="1"/>
       <node ref="R215" pin="2"/>
       <node ref="R216" pin="1"/>
-      <node ref="R213" pin="1"/>
     </net>
     <net code="21" name="Net-(C204-Pad2)">
-      <node ref="U201" pin="3"/>
-      <node ref="R214" pin="2"/>
       <node ref="C204" pin="2"/>
       <node ref="R202" pin="2"/>
+      <node ref="R214" pin="2"/>
+      <node ref="U201" pin="3"/>
     </net>
-    <net code="22" name="Net-(R214-Pad1)">
-      <node ref="R219" pin="1"/>
-      <node ref="R218" pin="2"/>
-      <node ref="R214" pin="1"/>
-    </net>
-    <net code="23" name="Net-(Q201-Pad1)">
+    <net code="22" name="Net-(Q201-Pad1)">
+      <node ref="R206" pin="1"/>
       <node ref="Q201" pin="1"/>
       <node ref="U301" pin="6"/>
     </net>
-    <net code="24" name="Net-(R203-Pad2)">
-      <node ref="R203" pin="2"/>
-      <node ref="U301" pin="2"/>
+    <net code="23" name="Net-(R207-Pad2)">
+      <node ref="U301" pin="5"/>
+      <node ref="R207" pin="2"/>
     </net>
-    <net code="25" name="Net-(C208-Pad2)">
-      <node ref="C208" pin="2"/>
-      <node ref="R208" pin="2"/>
-      <node ref="U301" pin="1"/>
+    <net code="24" name="Net-(R214-Pad1)">
+      <node ref="R218" pin="2"/>
+      <node ref="R219" pin="1"/>
+      <node ref="R214" pin="1"/>
     </net>
-    <net code="26" name="Net-(C209-Pad1)">
-      <node ref="R210" pin="1"/>
-      <node ref="C210" pin="2"/>
-      <node ref="C209" pin="1"/>
+    <net code="25" name="Net-(C201-Pad1)">
+      <node ref="R213" pin="2"/>
+      <node ref="C201" pin="1"/>
+      <node ref="R201" pin="1"/>
+      <node ref="U201" pin="1"/>
     </net>
-    <net code="27" name="Net-(C210-Pad1)">
-      <node ref="C211" pin="1"/>
-      <node ref="R211" pin="1"/>
-      <node ref="R215" pin="1"/>
-      <node ref="R217" pin="2"/>
-      <node ref="L201" pin="2"/>
-      <node ref="C210" pin="1"/>
-    </net>
-    <net code="28" name="Net-(D202-Pad1)">
+    <net code="26" name="Net-(D202-Pad1)">
       <node ref="Q201" pin="2"/>
       <node ref="D202" pin="1"/>
       <node ref="L201" pin="1"/>
       <node ref="R210" pin="2"/>
     </net>
-    <net code="29" name="Net-(C207-Pad2)">
-      <node ref="C207" pin="2"/>
-      <node ref="U301" pin="7"/>
+    <net code="27" name="Net-(R203-Pad2)">
+      <node ref="U301" pin="2"/>
+      <node ref="R203" pin="2"/>
     </net>
-    <net code="30" name="Net-(Q201-Pad3)">
-      <node ref="R209" pin="2"/>
+    <net code="28" name="Net-(C208-Pad2)">
+      <node ref="R208" pin="2"/>
+      <node ref="U301" pin="1"/>
+      <node ref="C208" pin="2"/>
+    </net>
+    <net code="29" name="Net-(C209-Pad1)">
+      <node ref="C209" pin="1"/>
+      <node ref="C210" pin="2"/>
+      <node ref="R210" pin="1"/>
+    </net>
+    <net code="30" name="Net-(C207-Pad2)">
+      <node ref="U301" pin="7"/>
+      <node ref="C207" pin="2"/>
+    </net>
+    <net code="31" name="Net-(Q201-Pad3)">
       <node ref="R207" pin="1"/>
+      <node ref="R209" pin="2"/>
       <node ref="Q201" pin="3"/>
     </net>
-    <net code="31" name="Net-(C209-Pad2)">
-      <node ref="R211" pin="2"/>
-      <node ref="R212" pin="1"/>
+    <net code="32" name="Net-(C210-Pad1)">
+      <node ref="L201" pin="2"/>
+      <node ref="C210" pin="1"/>
+      <node ref="R211" pin="1"/>
+      <node ref="R215" pin="1"/>
+      <node ref="C211" pin="1"/>
+      <node ref="R217" pin="2"/>
+    </net>
+    <net code="33" name="Net-(C209-Pad2)">
       <node ref="C209" pin="2"/>
+      <node ref="R212" pin="1"/>
+      <node ref="R211" pin="2"/>
       <node ref="U301" pin="3"/>
     </net>
-    <net code="32" name="Net-(Q301-Pad1)">
-      <node ref="Q301" pin="1"/>
-      <node ref="U302" pin="12"/>
-    </net>
-    <net code="33" name="Net-(Q303-Pad1)">
-      <node ref="Q303" pin="1"/>
-      <node ref="U302" pin="13"/>
-    </net>
-    <net code="34" name="Net-(Q304-Pad1)">
-      <node ref="U302" pin="14"/>
-      <node ref="Q304" pin="1"/>
-    </net>
-    <net code="35" name="Net-(U302-Pad6)">
-      <node ref="U302" pin="6"/>
-    </net>
-    <net code="36" name="Net-(U302-Pad5)">
-      <node ref="U302" pin="5"/>
-    </net>
-    <net code="37" name="Net-(U302-Pad4)">
-      <node ref="U302" pin="4"/>
-    </net>
-    <net code="38" name="Net-(U302-Pad3)">
-      <node ref="U302" pin="3"/>
-    </net>
-    <net code="39" name="Net-(R306-Pad2)">
-      <node ref="U304" pin="3"/>
-      <node ref="R306" pin="2"/>
+    <net code="34" name="Net-(R306-Pad2)">
       <node ref="R307" pin="1"/>
+      <node ref="R306" pin="2"/>
+      <node ref="U304" pin="3"/>
     </net>
-    <net code="40" name="Net-(R309-Pad2)">
-      <node ref="R309" pin="2"/>
-      <node ref="U303" pin="8"/>
+    <net code="35" name="Net-(D301-Pad1)">
+      <node ref="U304" pin="2"/>
+      <node ref="R312" pin="1"/>
+      <node ref="R311" pin="2"/>
+      <node ref="D301" pin="1"/>
     </net>
-    <net code="41" name="Net-(R303-Pad1)">
+    <net code="36" name="Net-(U304-Pad6)">
+      <node ref="U304" pin="6"/>
+    </net>
+    <net code="37" name="Net-(U304-Pad5)">
+      <node ref="U304" pin="5"/>
+    </net>
+    <net code="38" name="Net-(C313-Pad2)">
+      <node ref="C313" pin="2"/>
+    </net>
+    <net code="39" name="Net-(Q304-Pad3)">
+      <node ref="R318" pin="2"/>
+      <node ref="Q304" pin="3"/>
+    </net>
+    <net code="40" name="Net-(C313-Pad1)">
+      <node ref="C313" pin="1"/>
+    </net>
+    <net code="41" name="Net-(R304-Pad2)">
+      <node ref="U304" pin="7"/>
+      <node ref="U302" pin="11"/>
+      <node ref="R304" pin="2"/>
+    </net>
+    <net code="42" name="Net-(R303-Pad1)">
       <node ref="U303" pin="9"/>
       <node ref="R303" pin="1"/>
     </net>
-    <net code="42" name="Net-(Q303-Pad3)">
+    <net code="43" name="Net-(Q303-Pad3)">
       <node ref="Q303" pin="3"/>
       <node ref="R316" pin="2"/>
     </net>
-    <net code="43" name="Net-(R310-Pad2)">
-      <node ref="R310" pin="2"/>
+    <net code="44" name="Net-(R310-Pad2)">
       <node ref="R311" pin="1"/>
+      <node ref="R310" pin="2"/>
     </net>
-    <net code="44" name="Net-(R304-Pad2)">
-      <node ref="U302" pin="11"/>
-      <node ref="R304" pin="2"/>
-      <node ref="U304" pin="7"/>
+    <net code="45" name="Net-(Q301-Pad1)">
+      <node ref="Q301" pin="1"/>
+      <node ref="U302" pin="12"/>
     </net>
-    <net code="45" name="Net-(U304-Pad5)">
-      <node ref="U304" pin="5"/>
+    <net code="46" name="Net-(Q304-Pad1)">
+      <node ref="U302" pin="14"/>
+      <node ref="Q304" pin="1"/>
     </net>
-    <net code="46" name="Net-(D301-Pad1)">
-      <node ref="R312" pin="1"/>
-      <node ref="R311" pin="2"/>
-      <node ref="U304" pin="2"/>
-      <node ref="D301" pin="1"/>
-    </net>
-    <net code="47" name="Net-(U304-Pad6)">
-      <node ref="U304" pin="6"/>
-    </net>
-    <net code="48" name="Net-(Q302-Pad1)">
-      <node ref="Q302" pin="1"/>
+    <net code="47" name="Net-(Q302-Pad1)">
       <node ref="R315" pin="1"/>
-      <node ref="Q302" pin="2"/>
       <node ref="Q302" pin="3"/>
+      <node ref="Q302" pin="1"/>
       <node ref="R314" pin="1"/>
+      <node ref="Q302" pin="2"/>
     </net>
-    <net code="49" name="Net-(D302-Pad2)">
+    <net code="48" name="Net-(Q302-Pad4)">
+      <node ref="U303" pin="5"/>
+      <node ref="Q302" pin="4"/>
+    </net>
+    <net code="49" name="Net-(R309-Pad2)">
+      <node ref="R309" pin="2"/>
+      <node ref="U303" pin="8"/>
+    </net>
+    <net code="50" name="Net-(C307-Pad1)">
+      <node ref="R314" pin="2"/>
+      <node ref="C307" pin="1"/>
+      <node ref="R309" pin="1"/>
+    </net>
+    <net code="51" name="Net-(R301-Pad2)">
+      <node ref="R301" pin="2"/>
+      <node ref="R302" pin="1"/>
+      <node ref="U303" pin="7"/>
+    </net>
+    <net code="52" name="Net-(D302-Pad2)">
       <node ref="D302" pin="2"/>
       <node ref="Q302" pin="5"/>
       <node ref="L301" pin="2"/>
     </net>
-    <net code="50" name="Net-(Q302-Pad4)">
-      <node ref="Q302" pin="4"/>
-      <node ref="U303" pin="5"/>
-    </net>
-    <net code="51" name="Net-(C304-Pad1)">
-      <node ref="U303" pin="4"/>
+    <net code="53" name="Net-(C304-Pad1)">
       <node ref="C304" pin="1"/>
+      <node ref="U303" pin="4"/>
     </net>
-    <net code="52" name="Net-(C302-Pad1)">
-      <node ref="C302" pin="1"/>
+    <net code="54" name="Net-(C302-Pad1)">
       <node ref="U303" pin="10"/>
+      <node ref="C302" pin="1"/>
     </net>
-    <net code="53" name="Net-(R301-Pad2)">
-      <node ref="R302" pin="1"/>
-      <node ref="R301" pin="2"/>
-      <node ref="U303" pin="7"/>
-    </net>
-    <net code="54" name="Net-(C305-Pad2)">
-      <node ref="R305" pin="1"/>
+    <net code="55" name="Net-(C305-Pad2)">
       <node ref="C305" pin="2"/>
+      <node ref="R305" pin="1"/>
     </net>
-    <net code="55" name="Net-(C306-Pad2)">
+    <net code="56" name="Net-(C306-Pad2)">
+      <node ref="R305" pin="2"/>
       <node ref="C306" pin="2"/>
       <node ref="U303" pin="3"/>
-      <node ref="R305" pin="2"/>
     </net>
-    <net code="56" name="Net-(Q304-Pad3)">
-      <node ref="R318" pin="2"/>
-      <node ref="Q304" pin="3"/>
+    <net code="57" name="Net-(C305-Pad1)">
+      <node ref="R318" pin="1"/>
+      <node ref="R313" pin="1"/>
+      <node ref="R317" pin="2"/>
+      <node ref="U303" pin="2"/>
+      <node ref="C306" pin="1"/>
+      <node ref="R316" pin="1"/>
+      <node ref="C305" pin="1"/>
+      <node ref="R308" pin="1"/>
     </net>
-    <net code="57" name="Net-(Q301-Pad3)">
+    <net code="58" name="Net-(Q301-Pad3)">
       <node ref="R313" pin="2"/>
       <node ref="Q301" pin="3"/>
     </net>
-    <net code="58" name="Net-(C305-Pad1)">
-      <node ref="C305" pin="1"/>
-      <node ref="R313" pin="1"/>
-      <node ref="R308" pin="1"/>
-      <node ref="R317" pin="2"/>
-      <node ref="R316" pin="1"/>
-      <node ref="C306" pin="1"/>
-      <node ref="R318" pin="1"/>
-      <node ref="U303" pin="2"/>
-    </net>
-    <net code="59" name="Net-(C307-Pad1)">
-      <node ref="C307" pin="1"/>
-      <node ref="R309" pin="1"/>
-      <node ref="R314" pin="2"/>
+    <net code="59" name="Net-(Q303-Pad1)">
+      <node ref="U302" pin="13"/>
+      <node ref="Q303" pin="1"/>
     </net>
     <net code="60" name="Net-(U401-Pad4)">
       <node ref="U401" pin="4"/>
     </net>
     <net code="61" name="Net-(U401-Pad5)">
       <node ref="U401" pin="5"/>
+    </net>
+    <net code="62" name="Net-(D606-Pad1)">
+      <node ref="R620" pin="1"/>
+      <node ref="RV602" pin="2"/>
+      <node ref="U606" pin="2"/>
+      <node ref="D606" pin="1"/>
+    </net>
+    <net code="63" name="Net-(R619-Pad1)">
+      <node ref="R619" pin="1"/>
+      <node ref="R620" pin="2"/>
+    </net>
+    <net code="64" name="Net-(R615-Pad1)">
+      <node ref="U606" pin="7"/>
+      <node ref="R615" pin="1"/>
+      <node ref="U601" pin="11"/>
+    </net>
+    <net code="65" name="Net-(R606-Pad1)">
+      <node ref="R606" pin="1"/>
+      <node ref="U601" pin="12"/>
+      <node ref="U605" pin="7"/>
+    </net>
+    <net code="66" name="Net-(U601-Pad13)">
+      <node ref="U601" pin="13"/>
+      <node ref="U604" pin="2"/>
+    </net>
+    <net code="67" name="Net-(D605-Pad2)">
+      <node ref="R608" pin="1"/>
+      <node ref="R609" pin="1"/>
+      <node ref="Q602" pin="3"/>
+      <node ref="D605" pin="2"/>
+    </net>
+    <net code="68" name="Net-(Q602-Pad1)">
+      <node ref="Q602" pin="1"/>
+      <node ref="R607" pin="1"/>
+      <node ref="R608" pin="2"/>
+    </net>
+    <net code="69" name="Net-(C614-Pad2)">
+      <node ref="C614" pin="2"/>
+      <node ref="U604" pin="6"/>
+      <node ref="R609" pin="2"/>
+    </net>
+    <net code="70" name="Net-(C614-Pad1)">
+      <node ref="U604" pin="8"/>
+      <node ref="D603" pin="1"/>
+      <node ref="C614" pin="1"/>
+    </net>
+    <net code="71" name="Net-(R607-Pad2)">
+      <node ref="U604" pin="7"/>
+      <node ref="R607" pin="2"/>
+    </net>
+    <net code="72" name="Net-(U604-Pad5)">
+      <node ref="U604" pin="5"/>
+    </net>
+    <net code="73" name="Net-(U604-Pad3)">
+      <node ref="U604" pin="3"/>
+    </net>
+    <net code="74" name="Net-(R613-Pad1)">
+      <node ref="R613" pin="1"/>
+      <node ref="R614" pin="2"/>
+    </net>
+    <net code="75" name="Net-(D604-Pad1)">
+      <node ref="D604" pin="1"/>
+      <node ref="U605" pin="2"/>
+      <node ref="R614" pin="1"/>
+      <node ref="RV601" pin="2"/>
+    </net>
+    <net code="76" name="Net-(R616-Pad1)">
+      <node ref="R616" pin="1"/>
+      <node ref="U606" pin="3"/>
+      <node ref="R617" pin="2"/>
+    </net>
+    <net code="77" name="+15V">
+      <node ref="R601" pin="2"/>
+      <node ref="C609" pin="1"/>
+      <node ref="C606" pin="1"/>
+      <node ref="C602" pin="1"/>
+      <node ref="U604" pin="1"/>
+      <node ref="R605" pin="2"/>
+      <node ref="C611" pin="1"/>
+      <node ref="C613" pin="1"/>
+      <node ref="U602" pin="3"/>
+      <node ref="U603" pin="1"/>
+      <node ref="C604" pin="1"/>
+    </net>
+    <net code="78" name="Net-(D603-Pad2)">
+      <node ref="R605" pin="1"/>
+      <node ref="D603" pin="2"/>
+    </net>
+    <net code="79" name="Net-(U606-Pad6)">
+      <node ref="U606" pin="6"/>
+    </net>
+    <net code="80" name="Net-(U606-Pad5)">
+      <node ref="U606" pin="5"/>
+    </net>
+    <net code="81" name="Net-(R612-Pad2)">
+      <node ref="R612" pin="2"/>
+      <node ref="RV601" pin="3"/>
+    </net>
+    <net code="82" name="Net-(R618-Pad2)">
+      <node ref="R618" pin="2"/>
+      <node ref="RV602" pin="3"/>
+    </net>
+    <net code="83" name="Net-(RV601-Pad1)">
+      <node ref="RV601" pin="1"/>
+    </net>
+    <net code="84" name="Net-(RV602-Pad1)">
+      <node ref="RV602" pin="1"/>
+    </net>
+    <net code="85" name="/Spark Output/Spark_Output">
+      <node ref="R613" pin="2"/>
+      <node ref="R619" pin="2"/>
+      <node ref="D605" pin="1"/>
+      <node ref="D602" pin="1"/>
+    </net>
+    <net code="86" name="Net-(C607-Pad2)">
+      <node ref="C607" pin="2"/>
+      <node ref="R604" pin="2"/>
+      <node ref="U603" pin="6"/>
+    </net>
+    <net code="87" name="Net-(R602-Pad2)">
+      <node ref="U603" pin="7"/>
+      <node ref="R602" pin="2"/>
+    </net>
+    <net code="88" name="Net-(Q601-Pad1)">
+      <node ref="Q601" pin="1"/>
+      <node ref="R603" pin="2"/>
+      <node ref="R602" pin="1"/>
+    </net>
+    <net code="89" name="Net-(D601-Pad2)">
+      <node ref="D601" pin="2"/>
+      <node ref="R601" pin="1"/>
+    </net>
+    <net code="90" name="Net-(D602-Pad2)">
+      <node ref="D602" pin="2"/>
+      <node ref="R603" pin="1"/>
+      <node ref="R604" pin="1"/>
+      <node ref="Q601" pin="3"/>
+    </net>
+    <net code="91" name="Net-(C607-Pad1)">
+      <node ref="D601" pin="1"/>
+      <node ref="U603" pin="8"/>
+      <node ref="C607" pin="1"/>
+    </net>
+    <net code="92" name="Net-(U603-Pad5)">
+      <node ref="U603" pin="5"/>
+    </net>
+    <net code="93" name="Net-(U603-Pad3)">
+      <node ref="U603" pin="3"/>
+    </net>
+    <net code="94" name="Net-(U601-Pad14)">
+      <node ref="U603" pin="2"/>
+      <node ref="U601" pin="14"/>
+    </net>
+    <net code="95" name="/Spark Output/+24V">
+      <node ref="C601" pin="1"/>
+      <node ref="U602" pin="1"/>
+    </net>
+    <net code="96" name="Net-(R610-Pad1)">
+      <node ref="R611" pin="2"/>
+      <node ref="U605" pin="3"/>
+      <node ref="R610" pin="1"/>
+    </net>
+    <net code="97" name="Net-(U605-Pad6)">
+      <node ref="U605" pin="6"/>
+    </net>
+    <net code="98" name="Net-(U605-Pad5)">
+      <node ref="U605" pin="5"/>
     </net>
   </nets>
 </export>
