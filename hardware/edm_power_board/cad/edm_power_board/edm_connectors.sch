@@ -118,4 +118,44 @@ Wire Wire Line
 	5100 4000 5400 4000
 Wire Wire Line
 	5400 4100 5100 4100
+$Comp
+L Connector_Generic:Conn_01x02 JJ503
+U 1 1 5A805502
+P 5600 4700
+F 0 "JJ503" H 5680 4692 50  0000 L CNN
+F 1 "Conn_01x02" H 5680 4601 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5600 4700 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 5600 4700 50  0001 C CNN
+F 4 "ED1609-ND" H 5600 4700 50  0001 C CNN "Digikey"
+	1    5600 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 JJ504
+U 1 1 5A805C17
+P 5600 5050
+F 0 "JJ504" H 5680 5042 50  0000 L CNN
+F 1 "Conn_01x02" H 5680 4951 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5600 5050 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 5600 5050 50  0001 C CNN
+F 4 "ED1609-ND" H 5600 5050 50  0001 C CNN "Digikey"
+	1    5600 5050
+	1    0    0    -1  
+$EndComp
+Text HLabel 5100 5150 0    50   Input ~ 0
+GNDPWR
+Wire Wire Line
+	5400 5150 5100 5150
+Text HLabel 5100 5050 0    50   Input ~ 0
+GNDPWR
+Wire Wire Line
+	5400 5050 5100 5050
+Text HLabel 5100 4700 0    50   Input ~ 0
+Spark_Output
+Wire Wire Line
+	5100 4700 5400 4700
+Text HLabel 5100 4800 0    50   Input ~ 0
+Spark_Output
+Wire Wire Line
+	5100 4800 5400 4800
 $EndSCHEMATC
