@@ -26,7 +26,7 @@ U 1 1 5A73A8F1
 P 5800 3200
 F 0 "U401" H 5800 3442 50  0000 C CNN
 F 1 "L78L05_SO8" H 5800 3351 50  0000 C CNN
-F 2 "Package_SOIC:SOIC-8_3.9x4.9mm_P1.27mm" H 5900 3400 50  0001 C CIN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5900 3400 50  0001 C CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 6000 3200 50  0001 C CNN
 F 4 "497-1182-1-ND" H 5800 3200 50  0001 C CNN "Digikey"
 	1    5800 3200

@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\development\github\EDM\hardware\edm_power_board\cad\edm_power_board\edm_power_board.sch</source>
-    <date>2018-02-10 15:13:41</date>
+    <date>2018-02-11 00:52:51</date>
     <tool>Eeschema (2018-01-21 revision 81642dddd)-makepkg</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -239,7 +239,7 @@
     </comp>
     <comp ref="R219">
       <value>20m</value>
-      <footprint>Resistor_SMD:R_Stackpole_CSSH2728</footprint>
+      <footprint>Resistor_SMD:R_Stackpole_CSSH2728_4-100m</footprint>
       <datasheet>https://www.seielect.com/catalog/SEI-CSS_cssh.PDF</datasheet>
       <fields>
         <field name="Digikey">CSSH2728FT20L0CT-ND</field>
@@ -690,7 +690,7 @@
       <value>470n</value>
       <footprint>Capacitor_SMD:C_1812_4532Metric</footprint>
       <fields>
-        <field name="Digikey">445-13461-2-ND</field>
+        <field name="Digikey">445-13461-1-ND</field>
       </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
@@ -843,7 +843,7 @@
       <value>470n</value>
       <footprint>Capacitor_SMD:C_1812_4532Metric</footprint>
       <fields>
-        <field name="Digikey">445-13461-2-ND</field>
+        <field name="Digikey">445-13461-1-ND</field>
       </fields>
       <libsource lib="Device" part="C"/>
       <sheetpath names="/Spark Voltage Source/" tstamps="/5A728D61/"/>
