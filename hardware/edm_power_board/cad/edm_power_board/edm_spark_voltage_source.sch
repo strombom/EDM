@@ -928,14 +928,14 @@ F 4 "311-84.5KCRCT-ND" H 3050 2700 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Isolator:Si8641BB-B-IS1 U301
+L Isolator:Si8641BB-B-IS U301
 U 1 1 5A79F1F6
 P 3250 5250
 F 0 "U301" H 3250 5917 50  0000 C CNN
-F 1 "Si8641BB-B-IS1" H 3250 5826 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3250 4700 50  0001 C CIN
+F 1 "Si8641BB-B-IS" H 3250 5826 50  0000 C CNN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 3250 4700 50  0001 C CIN
 F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 3250 5650 50  0001 C CNN
-F 4 "336-2566-ND" H 3250 5250 50  0001 C CNN "Digikey"
+F 4 "SI8641BB-B-IS-ND" H 3250 5250 50  0001 C CNN "Digikey"
 	1    3250 5250
 	1    0    0    -1  
 $EndComp
