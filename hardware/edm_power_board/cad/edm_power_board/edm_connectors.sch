@@ -24,7 +24,7 @@ U 1 1 5A7A474C
 P 5600 2450
 F 0 "J501" H 5650 2967 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 5650 2876 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x08_P1.27mm_Vertical" H 5600 2450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 5600 2450 50  0001 C CNN
 F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/302-sxxx.pdf" H 5600 2450 50  0001 C CNN
 F 4 "ED10523-ND" H 5600 2450 50  0001 C CNN "Digikey"
 	1    5600 2450

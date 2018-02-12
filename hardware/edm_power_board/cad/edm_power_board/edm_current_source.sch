@@ -413,17 +413,6 @@ Wire Wire Line
 Connection ~ 2550 4000
 Wire Wire Line
 	2550 4000 3000 4000
-$Comp
-L power:GND #PWR0208
-U 1 1 5A794402
-P 3200 4500
-F 0 "#PWR0208" H 3200 4250 50  0001 C CNN
-F 1 "GND" H 3205 4327 50  0000 C CNN
-F 2 "" H 3200 4500 50  0001 C CNN
-F 3 "" H 3200 4500 50  0001 C CNN
-	1    3200 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 4400 3200 4500
 Wire Wire Line
@@ -781,17 +770,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2750 6850 50  0001 C CNN
 	1    2750 6850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0203
-U 1 1 5A8203CF
-P 2000 7200
-F 0 "#PWR0203" H 2000 6950 50  0001 C CNN
-F 1 "GND" H 2005 7027 50  0000 C CNN
-F 2 "" H 2000 7200 50  0001 C CNN
-F 3 "" H 2000 7200 50  0001 C CNN
-	1    2000 7200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2450 6950 2350 6950
 Wire Wire Line
@@ -1007,8 +985,8 @@ Text Label 7700 4100 0    50   ~ 0
 CS_2-
 Text Label 7700 4500 0    50   ~ 0
 CS_2+
-Text Label 3250 4900 0    50   ~ 0
-CS_FB
+Text Label 3300 4900 0    50   ~ 0
+CS_5
 Text Label 2050 6750 0    50   ~ 0
 CS_NC1
 Text Label 2400 7300 0    50   ~ 0
@@ -1024,6 +1002,28 @@ F 1 "GNDPWR" H 8300 3100 50  0000 C CNN
 F 2 "" H 8300 3200 50  0001 C CNN
 F 3 "" H 8300 3200 50  0001 C CNN
 	1    8300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5A8E371E
+P 3200 4500
+F 0 "#PWR?" H 3200 4300 50  0001 C CNN
+F 1 "GNDPWR" H 3200 4350 50  0000 C CNN
+F 2 "" H 3200 4450 50  0001 C CNN
+F 3 "" H 3200 4450 50  0001 C CNN
+	1    3200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5A8E3779
+P 2000 7200
+F 0 "#PWR?" H 2000 7000 50  0001 C CNN
+F 1 "GNDPWR" H 2000 7050 50  0000 C CNN
+F 2 "" H 2000 7150 50  0001 C CNN
+F 3 "" H 2000 7150 50  0001 C CNN
+	1    2000 7200
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

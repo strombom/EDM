@@ -259,7 +259,7 @@ U 1 1 5A727F63
 P 5400 1300
 F 0 "L301" V 5590 1300 50  0000 C CNN
 F 1 "1m" V 5499 1300 50  0000 C CNN
-F 2 "Inductor_SMD:L_12x12mm_H8mm" H 5400 1300 50  0001 C CNN
+F 2 "Inductor_SMD:L_Pulse_PA4320" H 5400 1300 50  0001 C CNN
 F 3 "http://productfinder.pulseeng.com/products/datasheets/P787.pdf" H 5400 1300 50  0001 C CNN
 F 4 "553-3686-1-ND" V 5400 1300 50  0001 C CNN "Digikey"
 	1    5400 1300

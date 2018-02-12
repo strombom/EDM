@@ -1420,4 +1420,26 @@ F 4 "311-93.1KCRCT-ND" H 10700 4300 50  0001 C CNN "Digikey"
 	1    10700 4300
 	-1   0    0    1   
 $EndComp
+Text Label 5000 1650 0    50   ~ 0
++250V_Out
+Text Label 7300 1650 0    50   ~ 0
++20V_Out
+Text Label 6200 2850 0    50   ~ 0
+LV_ENA
+Text Label 7000 2350 1    50   ~ 0
+LV_ENB
+Text Label 4700 2350 1    50   ~ 0
+HV_ENB
+Text Label 3900 2850 0    50   ~ 0
+HV_ENA
+Text Label 3900 2650 0    50   ~ 0
+HV_VB
+Text Label 3900 3050 0    50   ~ 0
+HV_VS
+Text Label 6200 3050 0    50   ~ 0
+LV_VS
+Text Label 6200 2650 0    50   ~ 0
+LV_VB
+Text Label 9100 1650 0    50   ~ 0
+Spark_Output
 $EndSCHEMATC
