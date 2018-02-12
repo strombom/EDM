@@ -30,21 +30,21 @@ F 4 "ED10523-ND" H 5600 2450 50  0001 C CNN "Digikey"
 	1    5600 2450
 	1    0    0    -1  
 $EndComp
-Text HLabel 6400 2150 2    50   Input ~ 0
-Output_250V_Enable
-Text HLabel 6400 2250 2    50   Input ~ 0
-Output_20V_Enable
-Text HLabel 6400 2350 2    50   Input ~ 0
-Short_Circuit
-Text HLabel 6400 2450 2    50   Input ~ 0
-Breakdown
 Text HLabel 6400 2550 2    50   Input ~ 0
-Spark_Voltage_0
+Output_250V_Enable
 Text HLabel 6400 2650 2    50   Input ~ 0
-Spark_Voltage_1
+Output_20V_Enable
 Text HLabel 6400 2750 2    50   Input ~ 0
-Spark_Voltage_2
+Short_Circuit
 Text HLabel 6400 2850 2    50   Input ~ 0
+Breakdown
+Text HLabel 6400 2150 2    50   Input ~ 0
+Spark_Voltage_0
+Text HLabel 6400 2250 2    50   Input ~ 0
+Spark_Voltage_1
+Text HLabel 6400 2350 2    50   Input ~ 0
+Spark_Voltage_2
+Text HLabel 6400 2450 2    50   Input ~ 0
 Spark_Voltage_Status
 Text HLabel 5100 2150 0    50   Input ~ 0
 +3V3
@@ -87,14 +87,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 2150 5400 2150
 Wire Wire Line
-	5900 2150 6400 2150
-Wire Wire Line
-	6400 2250 5900 2250
-Wire Wire Line
-	5900 2350 6400 2350
-Wire Wire Line
-	6400 2450 5900 2450
-Wire Wire Line
 	5900 2550 6400 2550
 Wire Wire Line
 	6400 2650 5900 2650
@@ -102,6 +94,14 @@ Wire Wire Line
 	5900 2750 6400 2750
 Wire Wire Line
 	6400 2850 5900 2850
+Wire Wire Line
+	5900 2150 6400 2150
+Wire Wire Line
+	6400 2250 5900 2250
+Wire Wire Line
+	5900 2350 6400 2350
+Wire Wire Line
+	6400 2450 5900 2450
 $Comp
 L Connector_Generic:Conn_01x02 J502
 U 1 1 5A7F6FB6
