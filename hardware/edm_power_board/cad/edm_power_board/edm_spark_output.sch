@@ -889,8 +889,6 @@ Wire Wire Line
 Connection ~ 8650 1650
 Wire Wire Line
 	10700 3550 8850 3550
-Wire Wire Line
-	8850 3550 8850 1650
 Connection ~ 8850 1650
 Wire Wire Line
 	2550 2400 2550 2200
@@ -947,7 +945,7 @@ Wire Wire Line
 Text HLabel 9900 1650 2    50   Input ~ 0
 Spark_Output
 Wire Wire Line
-	8850 1650 9900 1650
+	8850 1650 8950 1650
 Wire Wire Line
 	3900 2850 4300 2850
 Wire Wire Line
@@ -1128,7 +1126,7 @@ Text Notes 9900 4750 0    50   ~ 0
 Text Notes 8250 3700 0    50   ~ 0
 30V
 Text Notes 10750 3700 0    50   ~ 0
-5V
+4V
 $Comp
 L Device:C C605
 U 1 1 5A8075C5
@@ -1442,4 +1440,71 @@ Text Label 6200 2650 0    50   ~ 0
 LV_VB
 Text Label 9100 1650 0    50   ~ 0
 Spark_Output
+$Comp
+L Device:D D607
+U 1 1 5A81E29E
+P 9200 2500
+F 0 "D607" V 9246 2421 50  0000 R CNN
+F 1 "RS1MTR" V 9155 2421 50  0000 R CNN
+F 2 "Diode_SMD:D_SMA" H 9200 2500 50  0001 C CNN
+F 3 "http://www.smc-diodes.com/propdf/RS1A-RS1M%20N0988%20REV.B.pdf" H 9200 2500 50  0001 C CNN
+F 4 "1655-1501-1-ND" V 9200 2500 50  0001 C CNN "Digikey"
+F 5 "500ns" V 9200 2500 50  0001 C CNN "trr"
+F 6 "1,3V @ 1A" V 9200 2500 50  0001 C CNN "Vf"
+F 7 "1000V" V 9200 2500 50  0001 C CNN "Vr"
+	1    9200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R621
+U 1 1 5A81E7BE
+P 9600 2500
+F 0 "R621" H 9530 2454 50  0000 R CNN
+F 1 "21k" H 9530 2545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9530 2500 50  0001 C CNN
+F 3 "~" H 9600 2500 50  0001 C CNN
+F 4 "311-21.0KCRCT-ND" H 9600 2500 50  0001 C CNN "Digikey"
+	1    9600 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R622
+U 1 1 5A827E7D
+P 10000 2500
+F 0 "R622" H 9930 2454 50  0000 R CNN
+F 1 "21k" H 9930 2545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9930 2500 50  0001 C CNN
+F 3 "~" H 10000 2500 50  0001 C CNN
+F 4 "311-21.0KCRCT-ND" H 10000 2500 50  0001 C CNN "Digikey"
+	1    10000 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0629
+U 1 1 5A82849A
+P 10250 2400
+F 0 "#PWR0629" H 10250 2250 50  0001 C CNN
+F 1 "+5V" H 10265 2573 50  0000 C CNN
+F 2 "" H 10250 2400 50  0001 C CNN
+F 3 "" H 10250 2400 50  0001 C CNN
+	1    10250 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2500 10250 2500
+Wire Wire Line
+	10250 2500 10250 2400
+Wire Wire Line
+	9750 2500 9850 2500
+Wire Wire Line
+	9450 2500 9350 2500
+Wire Wire Line
+	8950 2500 8950 1650
+Wire Wire Line
+	8850 1650 8850 3550
+Connection ~ 8950 1650
+Wire Wire Line
+	8950 1650 9900 1650
+Wire Wire Line
+	8950 2500 9050 2500
 $EndSCHEMATC

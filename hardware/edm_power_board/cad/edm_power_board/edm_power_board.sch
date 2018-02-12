@@ -66,6 +66,7 @@ F10 "Spark_Voltage_2" I R 6300 2600 50
 F11 "Spark_Voltage_Status" I R 6300 2700 50 
 F12 "+3V3" I L 4900 2100 50 
 F13 "GND" I L 4900 2200 50 
+F14 "Spark_Output" I R 6300 1800 50 
 $EndSheet
 $Sheet
 S 8100 3550 1300 700 
@@ -82,6 +83,7 @@ F8 "Output_250V_Enable" I R 9400 3650 50
 F9 "Output_20V_Enable" I R 9400 3750 50 
 F10 "Short_Circuit" I R 9400 3850 50 
 F11 "Breakdown" I R 9400 3950 50 
+F12 "Spark_Output" I R 9400 4150 50 
 $EndSheet
 Wire Wire Line
 	6300 3650 8100 3650
@@ -236,14 +238,10 @@ Wire Wire Line
 Wire Wire Line
 	1450 1800 1450 3650
 Connection ~ 1450 3650
-Text HLabel 9400 4150 0    50   Input ~ 0
-Spark_Output
-Text HLabel 6300 1800 0    50   Input ~ 0
-Spark_Output
 Wire Wire Line
-	6300 1800 10250 1800
+	9400 4150 10250 4150
 Wire Wire Line
-	10250 1800 10250 4150
+	10250 4150 10250 1800
 Wire Wire Line
-	10250 4150 9400 4150
+	10250 1800 6300 1800
 $EndSCHEMATC

@@ -145,19 +145,7 @@ $EndComp
 Text HLabel 5100 4800 0    50   Input ~ 0
 GNDPWR
 Wire Wire Line
-	5400 4800 5100 4800
-Text HLabel 5100 4700 0    50   Input ~ 0
-GNDPWR
-Wire Wire Line
-	5400 4700 5100 4700
-Text HLabel 5100 4350 0    50   Input ~ 0
-Spark_Output
-Wire Wire Line
-	5100 4350 5400 4350
-Text HLabel 5100 4450 0    50   Input ~ 0
-Spark_Output
-Wire Wire Line
-	5100 4450 5400 4450
+	5400 4800 5300 4800
 $Comp
 L Mechanical:Mounting_Hole_PAD MK501
 U 1 1 5A877221
@@ -351,4 +339,22 @@ Wire Wire Line
 Connection ~ 1850 7200
 Wire Wire Line
 	1850 7200 2200 7200
+Text HLabel 5100 4350 0    50   Input ~ 0
+Spark_Output
+Wire Wire Line
+	5100 4350 5300 4350
+Wire Wire Line
+	5400 4450 5300 4450
+Wire Wire Line
+	5300 4450 5300 4350
+Connection ~ 5300 4350
+Wire Wire Line
+	5300 4350 5400 4350
+Wire Wire Line
+	5400 4700 5300 4700
+Wire Wire Line
+	5300 4700 5300 4800
+Connection ~ 5300 4800
+Wire Wire Line
+	5300 4800 5100 4800
 $EndSCHEMATC
