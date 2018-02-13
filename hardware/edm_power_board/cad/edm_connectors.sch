@@ -204,17 +204,6 @@ F 3 "" H 3250 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole_PAD MK506
-U 1 1 5A8795F9
-P 3600 6900
-F 0 "MK506" H 3500 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 3600 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 3600 6900 50  0001 C CNN
-F 3 "" H 3600 6900 50  0001 C CNN
-	1    3600 6900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:Mounting_Hole_PAD MK507
 U 1 1 5A8795FF
 P 3950 6900
@@ -269,26 +258,10 @@ F 3 "" H 5350 6900 50  0001 C CNN
 	1    5350 6900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:Mounting_Hole_PAD MK512
-U 1 1 5A879C73
-P 5700 6900
-F 0 "MK512" H 5600 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 5700 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 5700 6900 50  0001 C CNN
-F 3 "" H 5700 6900 50  0001 C CNN
-	1    5700 6900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5700 7200 5700 7000
 Wire Wire Line
 	1550 7200 1850 7200
 Wire Wire Line
 	5350 7200 5350 7000
-Connection ~ 5350 7200
-Wire Wire Line
-	5350 7200 5700 7200
 Wire Wire Line
 	5000 7200 5000 7000
 Connection ~ 5000 7200
@@ -309,9 +282,6 @@ Wire Wire Line
 Connection ~ 3950 7200
 Wire Wire Line
 	3950 7200 4300 7200
-Wire Wire Line
-	3600 7200 3600 7000
-Connection ~ 3600 7200
 Wire Wire Line
 	3600 7200 3950 7200
 Wire Wire Line
