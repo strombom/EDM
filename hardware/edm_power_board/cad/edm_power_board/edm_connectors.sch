@@ -14,9 +14,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 5100 3650 0    50   Input ~ 0
-+24V
 Text HLabel 5100 3750 0    50   Input ~ 0
++24V
+Text HLabel 5100 3650 0    50   Input ~ 0
 GNDPWR
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J501
@@ -115,9 +115,9 @@ F 4 "ED1609-ND" H 5600 3650 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 3650 5400 3650
+	5100 3750 5400 3750
 Wire Wire Line
-	5400 3750 5100 3750
+	5400 3650 5100 3650
 $Comp
 L Connector_Generic:Conn_01x02 JJ503
 U 1 1 5A805502

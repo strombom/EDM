@@ -1241,4 +1241,26 @@ Wire Wire Line
 Connection ~ 1750 1600
 Wire Wire Line
 	3500 1050 3500 1300
+Text Label 4450 1800 0    50   ~ 0
+VS_OUT
+Text Label 4450 1900 0    50   ~ 0
+VS_CS
+Text Label 4450 2100 0    50   ~ 0
+VS_FB
+Text Label 4450 2200 0    50   ~ 0
+VS_COMP
+Text Label 4450 2400 0    50   ~ 0
+VS_VCC
+Text Label 3200 2200 0    50   ~ 0
+VS_RT
+Text Label 3200 2000 0    50   ~ 0
+VS_UVLO
+Text Label 3200 1800 0    50   ~ 0
+VS_VIN
+Text Label 6300 2500 1    50   ~ 0
+VS_CS2
+Text Label 6800 2450 1    50   ~ 0
+VS_QS
+Text Label 6800 1550 1    50   ~ 0
+VS_QD
 $EndSCHEMATC
