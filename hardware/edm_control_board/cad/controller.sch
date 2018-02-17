@@ -193,60 +193,57 @@ Connection ~ 9250 4100
 $Comp
 L Transistor_FET:BSS214NW Q201
 U 1 1 5A97BBD5
-P 8550 5400
-F 0 "Q201" H 8755 5446 50  0000 L CNN
-F 1 "BSS214NW" H 8755 5355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8750 5325 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 8550 5400 50  0001 L CNN
-F 4 "BSS214NWH6327XTSA1" H 8550 5400 50  0001 C CNN "Digikey"
-	1    8550 5400
+P 8350 5200
+F 0 "Q201" H 8555 5246 50  0000 L CNN
+F 1 "BSS214NW" H 8555 5155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8550 5125 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 8350 5200 50  0001 L CNN
+F 4 "BSS214NWH6327XTSA1" H 8350 5200 50  0001 C CNN "Digikey"
+	1    8350 5200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR032
 U 1 1 5A97BBDB
-P 8650 6000
-F 0 "#PWR032" H 8650 5750 50  0001 C CNN
-F 1 "GND" H 8655 5827 50  0000 C CNN
-F 2 "" H 8650 6000 50  0001 C CNN
-F 3 "" H 8650 6000 50  0001 C CNN
-	1    8650 6000
+P 8450 5800
+F 0 "#PWR032" H 8450 5550 50  0001 C CNN
+F 1 "GND" H 8455 5627 50  0000 C CNN
+F 2 "" H 8450 5800 50  0001 C CNN
+F 3 "" H 8450 5800 50  0001 C CNN
+	1    8450 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 6000 8650 5900
-Text HLabel 8850 5100 2    50   Input ~ 0
+	8450 5800 8450 5700
+Text HLabel 8650 4900 2    50   Input ~ 0
 LCD_K
 Wire Wire Line
-	8650 5200 8650 5100
+	8450 5000 8450 4900
 Wire Wire Line
-	8650 5100 8850 5100
+	8450 4900 8650 4900
 $Comp
 L Device:R R201
 U 1 1 5A97BBE6
-P 8250 5650
-F 0 "R201" H 8320 5696 50  0000 L CNN
-F 1 "27k" H 8320 5605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8180 5650 50  0001 C CNN
-F 3 "~" H 8250 5650 50  0001 C CNN
-F 4 "311-27.0KCRCT-ND" H 8250 5650 50  0001 C CNN "Digikey"
-	1    8250 5650
+P 8050 5450
+F 0 "R201" H 8120 5496 50  0000 L CNN
+F 1 "27k" H 8120 5405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7980 5450 50  0001 C CNN
+F 3 "~" H 8050 5450 50  0001 C CNN
+F 4 "311-27.0KCRCT-ND" H 8050 5450 50  0001 C CNN "Digikey"
+	1    8050 5450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 5800 8250 5900
+	8050 5600 8050 5700
 Wire Wire Line
-	8250 5900 8650 5900
-Connection ~ 8650 5900
+	8050 5700 8450 5700
+Connection ~ 8450 5700
 Wire Wire Line
-	8650 5900 8650 5600
+	8450 5700 8450 5400
 Wire Wire Line
-	8250 5500 8250 5400
+	8050 5300 8050 5200
 Wire Wire Line
-	8250 5400 8350 5400
-Wire Wire Line
-	8250 5400 7750 5400
-Connection ~ 8250 5400
+	8050 5200 8150 5200
 Text HLabel 10050 5500 2    50   Input ~ 0
 LCD_A
 Text HLabel 1200 1150 0    50   Input ~ 0
@@ -308,27 +305,27 @@ F 4 "311-20.0CRCT-ND" H 9700 5500 50  0001 C CNN "Digikey"
 $EndComp
 Wire Wire Line
 	9450 5500 9550 5500
-Text HLabel 5950 2800 2    50   Input ~ 0
+Text HLabel 5950 3300 2    50   Input ~ 0
 LCD_RS
-Text HLabel 5950 2900 2    50   Input ~ 0
+Text HLabel 5950 3200 2    50   Input ~ 0
 LCD_RW
-Text HLabel 5950 3000 2    50   Input ~ 0
+Text HLabel 5950 3100 2    50   Input ~ 0
 LCD_E
-Text HLabel 5950 2000 2    50   Input ~ 0
+Text HLabel 5950 3000 2    50   Input ~ 0
 LCD_DB0
-Text HLabel 5950 2100 2    50   Input ~ 0
+Text HLabel 5950 2900 2    50   Input ~ 0
 LCD_DB1
-Text HLabel 5950 2200 2    50   Input ~ 0
+Text HLabel 5950 4400 2    50   Input ~ 0
 LCD_DB2
-Text HLabel 5950 2300 2    50   Input ~ 0
+Text HLabel 5950 4300 2    50   Input ~ 0
 LCD_DB3
-Text HLabel 5950 2400 2    50   Input ~ 0
+Text HLabel 5950 4200 2    50   Input ~ 0
 LCD_DB4
-Text HLabel 5950 2500 2    50   Input ~ 0
+Text HLabel 5950 4100 2    50   Input ~ 0
 LCD_DB5
-Text HLabel 5950 2600 2    50   Input ~ 0
+Text HLabel 5950 4000 2    50   Input ~ 0
 LCD_DB6
-Text HLabel 5950 2700 2    50   Input ~ 0
+Text HLabel 4050 4900 0    50   Input ~ 0
 LCD_DB7
 $Comp
 L Device:POT RV201
@@ -610,21 +607,21 @@ Wire Wire Line
 	3200 3400 4350 3400
 Wire Wire Line
 	2700 3300 4350 3300
-Text HLabel 5950 3700 2    50   Input ~ 0
+Text HLabel 5950 4700 2    50   Input ~ 0
 Spark_Voltage_0
-Text HLabel 5950 3800 2    50   Input ~ 0
-Spark_Voltage_1
 Text HLabel 5950 3900 2    50   Input ~ 0
+Spark_Voltage_1
+Text HLabel 5950 3800 2    50   Input ~ 0
 Spark_Voltage_2
-Text HLabel 5950 4000 2    50   Input ~ 0
+Text HLabel 5950 3700 2    50   Input ~ 0
 Spark_Voltage_Status
-Text HLabel 5950 4100 2    50   Input ~ 0
+Text HLabel 5950 2700 2    50   Input ~ 0
 Output_250V_Enable
-Text HLabel 5950 4200 2    50   Input ~ 0
+Text HLabel 5950 2600 2    50   Input ~ 0
 Output_20V_Enable
-Text HLabel 5950 4300 2    50   Input ~ 0
+Text HLabel 5950 2500 2    50   Input ~ 0
 Short_Circuit
-Text HLabel 5950 4400 2    50   Input ~ 0
+Text HLabel 5950 2400 2    50   Input ~ 0
 Breakdown
 $Comp
 L Device:R R207
@@ -873,63 +870,70 @@ Wire Wire Line
 	2750 2000 4350 2000
 Connection ~ 2750 2000
 Wire Wire Line
-	7750 5400 7750 3500
+	8950 4000 8950 2800
 Wire Wire Line
-	7750 3500 5650 3500
-Wire Wire Line
-	5650 3400 7850 3400
-Wire Wire Line
-	7850 3400 7850 4100
-Wire Wire Line
-	7850 4100 9250 4100
-Wire Wire Line
-	5650 3300 7850 3300
-Wire Wire Line
-	7850 3300 7850 2800
-Wire Wire Line
-	7850 2800 9250 2800
-Wire Wire Line
-	5650 3200 7750 3200
-Wire Wire Line
-	7750 3200 7750 1500
-Wire Wire Line
-	7750 1500 9250 1500
-Wire Wire Line
-	5650 2000 5950 2000
-Wire Wire Line
-	5950 2100 5650 2100
-Wire Wire Line
-	5650 2200 5950 2200
-Wire Wire Line
-	5950 2300 5650 2300
-Wire Wire Line
-	5650 2400 5950 2400
-Wire Wire Line
-	5950 2500 5650 2500
-Wire Wire Line
-	5650 2600 5950 2600
-Wire Wire Line
-	5950 2700 5650 2700
-Wire Wire Line
-	5650 2800 5950 2800
-Wire Wire Line
-	5950 2900 5650 2900
+	8950 2800 9250 2800
 Wire Wire Line
 	5650 3000 5950 3000
 Wire Wire Line
-	5950 3700 5650 3700
+	5950 2900 5650 2900
 Wire Wire Line
-	5650 3800 5950 3800
-Wire Wire Line
-	5950 3900 5650 3900
-Wire Wire Line
-	5650 4000 5950 4000
-Wire Wire Line
-	5950 4100 5650 4100
-Wire Wire Line
-	5650 4200 5950 4200
+	5650 4400 5950 4400
 Wire Wire Line
 	5950 4300 5650 4300
 Wire Wire Line
-	5650 4400 5950 4400
+	5650 4200 5950 4200
+Wire Wire Line
+	5950 4100 5650 4100
+Wire Wire Line
+	5650 4000 5950 4000
+Wire Wire Line
+	4050 4900 4350 4900
+Wire Wire Line
+	5650 3300 5950 3300
+Wire Wire Line
+	5950 3200 5650 3200
+Wire Wire Line
+	5650 3100 5950 3100
+Wire Wire Line
+	5950 4700 5650 4700
+Wire Wire Line
+	5650 3900 5950 3900
+Wire Wire Line
+	5950 3800 5650 3800
+Wire Wire Line
+	5650 3700 5950 3700
+Wire Wire Line
+	5950 2700 5650 2700
+Wire Wire Line
+	5650 2600 5950 2600
+Wire Wire Line
+	5950 2500 5650 2500
+Wire Wire Line
+	5650 2400 5950 2400
+Wire Wire Line
+	5650 4900 7500 4900
+Wire Wire Line
+	7500 4900 7500 4100
+Wire Wire Line
+	7500 4100 9250 4100
+Wire Wire Line
+	5650 5000 7600 5000
+Wire Wire Line
+	7600 5000 7600 4000
+Wire Wire Line
+	7600 4000 8950 4000
+Wire Wire Line
+	5650 5100 7700 5100
+Wire Wire Line
+	7700 5100 7700 3900
+Wire Wire Line
+	7700 3900 8850 3900
+Wire Wire Line
+	8850 3900 8850 1500
+Wire Wire Line
+	8850 1500 9250 1500
+Wire Wire Line
+	5650 5200 8050 5200
+Connection ~ 8050 5200
 $EndSCHEMATC
