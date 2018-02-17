@@ -336,9 +336,9 @@ U 1 1 5A980543
 P 1450 6950
 F 0 "RV201" H 1381 6996 50  0000 R CNN
 F 1 "20k" H 1381 6905 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3214X_Vertical" H 1450 6950 50  0001 C CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3214J_Horizontal" H 1450 6950 50  0001 C CNN
 F 3 "http://www.bourns.com/docs/Product-Datasheets/3214.pdf" H 1450 6950 50  0001 C CNN
-F 4 "3214X-1-203ECT-ND" H 1450 6950 50  0001 C CNN "Digikey"
+F 4 "3214J-203ECT-ND" H 1450 6950 50  0001 C CNN "Digikey"
 	1    1450 6950
 	-1   0    0    -1  
 $EndComp
