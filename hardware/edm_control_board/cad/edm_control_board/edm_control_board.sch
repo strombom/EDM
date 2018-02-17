@@ -17,7 +17,7 @@ $EndDescr
 $Sheet
 S 1800 1900 950  4250
 U 5A95285C
-F0 "controller" 50
+F0 "Controller" 50
 F1 "controller.sch" 50
 F2 "+3V3" I L 1800 2000 50 
 F3 "GND" I L 1800 2100 50 
@@ -58,7 +58,7 @@ $EndSheet
 $Sheet
 S 8000 3450 1200 400 
 U 5A89896C
-F0 "power_management" 50
+F0 "Power Management" 50
 F1 "power_management.sch" 50
 F2 "+24V" I L 8000 3550 50 
 F3 "GNDPWR" I L 8000 3650 50 
