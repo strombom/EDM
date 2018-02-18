@@ -149,132 +149,125 @@ Wire Wire Line
 $Comp
 L Mechanical:Mounting_Hole_PAD MK501
 U 1 1 5A877221
-P 1850 6900
-F 0 "MK501" H 1750 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 1850 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 1850 6900 50  0001 C CNN
-F 3 "" H 1850 6900 50  0001 C CNN
-	1    1850 6900
+P 2950 6500
+F 0 "MK501" H 2850 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 2950 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 2950 6500 50  0001 C CNN
+F 3 "" H 2950 6500 50  0001 C CNN
+	1    2950 6500
 	1    0    0    -1  
 $EndComp
-Text HLabel 1550 7200 0    50   Input ~ 0
+Text HLabel 1700 6800 0    50   Input ~ 0
 GNDPWR
 $Comp
 L Mechanical:Mounting_Hole_PAD MK502
 U 1 1 5A878F6C
-P 2200 6900
-F 0 "MK502" H 2100 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 2200 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 2200 6900 50  0001 C CNN
-F 3 "" H 2200 6900 50  0001 C CNN
-	1    2200 6900
+P 3300 6500
+F 0 "MK502" H 3200 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 3300 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 3300 6500 50  0001 C CNN
+F 3 "" H 3300 6500 50  0001 C CNN
+	1    3300 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK503
 U 1 1 5A87900B
-P 2550 6900
-F 0 "MK503" H 2450 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 2550 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 2550 6900 50  0001 C CNN
-F 3 "" H 2550 6900 50  0001 C CNN
-	1    2550 6900
+P 3650 6500
+F 0 "MK503" H 3550 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 3650 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 3650 6500 50  0001 C CNN
+F 3 "" H 3650 6500 50  0001 C CNN
+	1    3650 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK504
 U 1 1 5A879011
-P 2900 6900
-F 0 "MK504" H 2800 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 2900 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 2900 6900 50  0001 C CNN
-F 3 "" H 2900 6900 50  0001 C CNN
-	1    2900 6900
+P 4000 6500
+F 0 "MK504" H 3900 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 4000 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 4000 6500 50  0001 C CNN
+F 3 "" H 4000 6500 50  0001 C CNN
+	1    4000 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK507
 U 1 1 5A8795FF
-P 3950 6900
-F 0 "MK507" H 3850 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 3950 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 3950 6900 50  0001 C CNN
-F 3 "" H 3950 6900 50  0001 C CNN
-	1    3950 6900
+P 4350 6500
+F 0 "MK507" H 4250 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 4350 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 4350 6500 50  0001 C CNN
+F 3 "" H 4350 6500 50  0001 C CNN
+	1    4350 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK508
 U 1 1 5A879605
-P 4300 6900
-F 0 "MK508" H 4200 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 4300 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 4300 6900 50  0001 C CNN
-F 3 "" H 4300 6900 50  0001 C CNN
-	1    4300 6900
+P 4700 6500
+F 0 "MK508" H 4600 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 4700 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 4700 6500 50  0001 C CNN
+F 3 "" H 4700 6500 50  0001 C CNN
+	1    4700 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK509
 U 1 1 5A879C61
-P 4650 6900
-F 0 "MK509" H 4550 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 4650 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 4650 6900 50  0001 C CNN
-F 3 "" H 4650 6900 50  0001 C CNN
-	1    4650 6900
+P 5050 6500
+F 0 "MK509" H 4950 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 5050 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 5050 6500 50  0001 C CNN
+F 3 "" H 5050 6500 50  0001 C CNN
+	1    5050 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:Mounting_Hole_PAD MK510
 U 1 1 5A879C67
-P 5000 6900
-F 0 "MK510" H 4900 7100 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" V 5000 7200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_5mm_Pad" H 5000 6900 50  0001 C CNN
-F 3 "" H 5000 6900 50  0001 C CNN
-	1    5000 6900
+P 5400 6500
+F 0 "MK510" H 5300 6700 50  0000 L CNN
+F 1 "Mounting_Hole_PAD" V 5400 6800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5mm_Pad" H 5400 6500 50  0001 C CNN
+F 3 "" H 5400 6500 50  0001 C CNN
+	1    5400 6500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 7200 1850 7200
+	5400 6800 5400 6600
 Wire Wire Line
-	5000 7200 5000 7000
+	5050 6600 5050 6800
+Connection ~ 5050 6800
 Wire Wire Line
-	4650 7000 4650 7200
-Connection ~ 4650 7200
+	5050 6800 5400 6800
 Wire Wire Line
-	4650 7200 5000 7200
+	4700 6800 4700 6600
+Connection ~ 4700 6800
 Wire Wire Line
-	4300 7200 4300 7000
-Connection ~ 4300 7200
+	4700 6800 5050 6800
 Wire Wire Line
-	4300 7200 4650 7200
+	4350 6600 4350 6800
 Wire Wire Line
-	3950 7000 3950 7200
-Connection ~ 3950 7200
+	4350 6800 4700 6800
 Wire Wire Line
-	3950 7200 4300 7200
+	4000 6800 4000 6600
 Wire Wire Line
-	2900 7200 2900 7000
-Connection ~ 2900 7200
+	3650 6600 3650 6800
+Connection ~ 3650 6800
 Wire Wire Line
-	2900 7200 3250 7200
+	3650 6800 4000 6800
 Wire Wire Line
-	2550 7000 2550 7200
-Connection ~ 2550 7200
+	3300 6800 3300 6600
+Connection ~ 3300 6800
 Wire Wire Line
-	2550 7200 2900 7200
+	3300 6800 3650 6800
 Wire Wire Line
-	2200 7200 2200 7000
-Connection ~ 2200 7200
+	2950 6600 2950 6800
 Wire Wire Line
-	2200 7200 2550 7200
-Wire Wire Line
-	1850 7000 1850 7200
-Connection ~ 1850 7200
-Wire Wire Line
-	1850 7200 2200 7200
+	2950 6800 3300 6800
 Text HLabel 5100 4350 0    50   Input ~ 0
 Spark_Output
 Wire Wire Line
@@ -293,6 +286,53 @@ Wire Wire Line
 Connection ~ 5300 4800
 Wire Wire Line
 	5300 4800 5100 4800
+$Comp
+L Device:R R501
+U 1 1 5A89E5AB
+P 2100 6800
+F 0 "R501" V 1893 6800 50  0000 C CNN
+F 1 "1M" V 1984 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 2030 6800 50  0001 C CNN
+F 3 "~" H 2100 6800 50  0001 C CNN
+F 4 "311-1.00MFRCT-ND" V 2100 6800 50  0001 C CNN "Digikey"
+	1    2100 6800
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	3250 7200 3950 7200
+	4000 6800 4350 6800
+Connection ~ 4000 6800
+Connection ~ 4350 6800
+Wire Wire Line
+	1700 6800 1850 6800
+Wire Wire Line
+	2250 6800 2350 6800
+Text Label 2500 6800 0    50   ~ 0
+Shield
+$Comp
+L Device:C C501
+U 1 1 5A89EFEB
+P 2100 7200
+F 0 "C501" V 1848 7200 50  0000 C CNN
+F 1 "1800p" V 1939 7200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_2220_5650Metric" H 2138 7050 50  0001 C CNN
+F 3 "~" H 2100 7200 50  0001 C CNN
+F 4 "490-3479-1-ND" V 2100 7200 50  0001 C CNN "Digikey"
+	1    2100 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 7200 1850 7200
+Wire Wire Line
+	1850 7200 1850 6800
+Connection ~ 1850 6800
+Wire Wire Line
+	1850 6800 1950 6800
+Wire Wire Line
+	2250 7200 2350 7200
+Wire Wire Line
+	2350 7200 2350 6800
+Wire Wire Line
+	2350 6800 2950 6800
+Connection ~ 2350 6800
+Connection ~ 2950 6800
 $EndSCHEMATC
