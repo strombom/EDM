@@ -13,5 +13,5 @@
 Spark output, has two power transistors to enable the control board to control the voltage and current outputs independently. Has two comparators (5 V and 30 V) to give feedback to the control board, monitoring if a spark has started (breakdown) and to check for short circuit.
 
 ## Design files
-Control Board Schematics
-Power Board Schematics
+* [Control Board Schematics](https://github.com/strombom/EDM/raw/master/hardware/edm_control_board/documents/edm_control_board_schematics.pdf)
+* [Power Board Schematics](https://github.com/strombom/EDM/raw/master/hardware/edm_power_board/documents/edm_power_board_schematics.pdf)
