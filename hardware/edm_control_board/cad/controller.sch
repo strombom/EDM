@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -972,4 +972,8 @@ Text HLabel 5900 3700 2    50   Input ~ 0
 SWCLK
 Wire Wire Line
 	5900 3700 5600 3700
+Text HLabel 5900 4600 2    50   Input ~ 0
+Water_Pump_PWM
+Wire Wire Line
+	5900 4600 5600 4600
 $EndSCHEMATC

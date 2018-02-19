@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -14,9 +14,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 7550 2950 0    50   Input ~ 0
+Text HLabel 7550 2750 0    50   Input ~ 0
 +24V
-Text HLabel 7550 2850 0    50   Input ~ 0
+Text HLabel 7550 2650 0    50   Input ~ 0
 GNDPWR
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J401
@@ -105,20 +105,20 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x02 J402
 U 1 1 5A7F6FB6
-P 8050 2850
-F 0 "J402" H 8130 2842 50  0000 L CNN
-F 1 "Conn_01x02" H 8130 2751 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 2850 50  0001 C CNN
-F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 2850 50  0001 C CNN
-F 4 "ED1609-ND" H 8050 2850 50  0001 C CNN "Digikey"
-	1    8050 2850
+P 8050 2650
+F 0 "J402" H 8130 2642 50  0000 L CNN
+F 1 "Conn_01x02" H 8130 2551 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 2650 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 2650 50  0001 C CNN
+F 4 "ED1609-ND" H 8050 2650 50  0001 C CNN "Digikey"
+	1    8050 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 2950 7850 2950
+	7550 2750 7850 2750
 Wire Wire Line
-	7850 2850 7550 2850
-Text HLabel 7550 4000 0    50   Input ~ 0
+	7850 2650 7550 2650
+Text HLabel 7550 3800 0    50   Input ~ 0
 Stepper_EN
 $Comp
 L Mechanical:Mounting_Hole_PAD MK501
@@ -236,7 +236,7 @@ Wire Wire Line
 	2300 6600 2300 6800
 Wire Wire Line
 	2300 6800 2650 6800
-Text HLabel 7550 3550 0    50   Input ~ 0
+Text HLabel 7550 3350 0    50   Input ~ 0
 Stepper_PUL
 Wire Wire Line
 	3350 6800 3700 6800
@@ -299,39 +299,39 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x02 J404
 U 1 1 5A805C17
-P 8050 3900
-F 0 "J404" H 8130 3892 50  0000 L CNN
-F 1 "Conn_01x02" H 8130 3801 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 3900 50  0001 C CNN
-F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 3900 50  0001 C CNN
-F 4 "ED1609-ND" H 8050 3900 50  0001 C CNN "Digikey"
-	1    8050 3900
+P 8050 3700
+F 0 "J404" H 8130 3692 50  0000 L CNN
+F 1 "Conn_01x02" H 8130 3601 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 3700 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 3700 50  0001 C CNN
+F 4 "ED1609-ND" H 8050 3700 50  0001 C CNN "Digikey"
+	1    8050 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J403
 U 1 1 5A805502
-P 8050 3550
-F 0 "J403" H 8130 3542 50  0000 L CNN
-F 1 "Conn_01x02" H 8130 3451 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 3550 50  0001 C CNN
-F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 3550 50  0001 C CNN
-F 4 "ED1609-ND" H 8050 3550 50  0001 C CNN "Digikey"
-	1    8050 3550
+P 8050 3350
+F 0 "J403" H 8130 3342 50  0000 L CNN
+F 1 "Conn_01x02" H 8130 3251 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 3350 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 3350 50  0001 C CNN
+F 4 "ED1609-ND" H 8050 3350 50  0001 C CNN "Digikey"
+	1    8050 3350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 3550 7850 3550
+	7550 3350 7850 3350
 Wire Wire Line
-	7550 4000 7850 4000
-Text HLabel 7550 3650 0    50   Input ~ 0
+	7550 3800 7850 3800
+Text HLabel 7550 3450 0    50   Input ~ 0
 Stepper_DIR
 Wire Wire Line
-	7550 3650 7850 3650
-Text HLabel 7550 3900 0    50   Input ~ 0
+	7550 3450 7850 3450
+Text HLabel 7550 3700 0    50   Input ~ 0
 Stepper_+5V
 Wire Wire Line
-	7550 3900 7850 3900
+	7550 3700 7850 3700
 Connection ~ 5450 6800
 Wire Wire Line
 	5450 6800 5800 6800
@@ -429,4 +429,24 @@ Wire Wire Line
 Connection ~ 1400 6800
 Wire Wire Line
 	1400 6800 1500 6800
+Text HLabel 7550 4500 0    50   Input ~ 0
+Water_Pump_NEG
+$Comp
+L Connector_Generic:Conn_01x02 J406
+U 1 1 5A92EA50
+P 8050 4400
+F 0 "J406" H 8130 4392 50  0000 L CNN
+F 1 "Conn_01x02" H 8130 4301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8050 4400 50  0001 C CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/2015/09/ed120ds.pdf" H 8050 4400 50  0001 C CNN
+F 4 "ED1609-ND" H 8050 4400 50  0001 C CNN "Digikey"
+	1    8050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4500 7850 4500
+Text HLabel 7550 4400 0    50   Input ~ 0
+Water_Pump_POS
+Wire Wire Line
+	7550 4400 7850 4400
 $EndSCHEMATC
