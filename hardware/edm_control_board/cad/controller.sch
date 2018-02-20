@@ -22,6 +22,7 @@ F 0 "U301" H 5300 5800 50  0000 L CNN
 F 1 "STM32F722RETx" H 5300 5700 50  0000 L CNN
 F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4400 2200 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00330506.pdf" H 5000 3900 50  0001 C CNN
+F 4 "497-17184-ND" H 5000 3900 50  0001 C CNN "Digikey"
 	1    5000 3900
 	1    0    0    -1  
 $EndComp
