@@ -42,6 +42,8 @@
 #include "tim.h"
 #include "gpio.h"
 
+#include "display.h"
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -107,6 +109,8 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  Display display;
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -115,6 +119,8 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+
+	  display.work();
 
   }
   /* USER CODE END 3 */
