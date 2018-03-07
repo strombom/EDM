@@ -8,6 +8,7 @@
 #include "Display.h"
 
 #include <stdio.h>
+#include <string.h>
 
 Display::Display() {
 	// TODO Auto-generated constructor stub
@@ -16,7 +17,12 @@ Display::Display() {
 		buffer[i] = ' ';
 	}
 
-	sprintf(buffer, "Test");
+	hit_miss = 0.75;
+	depth = 0.03;
+	depth_max = 0.5;
+	ton = 0.000015;
+	toff = 0.000120;
+	voltage = 250;
 
 	// Backlight on
 	HAL_GPIO_WritePin(LCD_Background_Illumination_GPIO_Port, LCD_Background_Illumination_Pin, GPIO_PIN_SET);
@@ -31,27 +37,46 @@ Display::~Display() {
 void Display::work() {
 	uint32_t tick = HAL_GetTick();
 
+
 	if (tick > tick_timeout) {
+
+		hit_miss += 0.1;
+		if (hit_miss > 1) hit_miss = 0;
+
+		depth += 0.01;
+		if (depth > depth_max) depth = 0;
+
+
+
 		refresh();
 
 		while (tick > tick_timeout) {
-			tick_timeout += 100;
+			tick_timeout += 50;
 		}
 	}
 }
 
 void Display::refresh() {
+
+	//HIT: XXXXXXXXXXXXXXX
+	//DEPTH:  0.05 /  0.50
+	//TON: 150 TOFF: 1500
+	//VTG: 250 V
+
+	memset(buffer, ' ', 80);
+	sprintf (buffer, "HIT: ");
+	buffer[5] = ' ';
+	for (int i = 0; i < hit_miss * 15 + 0.5; i++) {
+		buffer[i + 5] = 0xFF;
+	}
+	sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", depth, depth_max);
+	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", ton * 1000000, toff * 1000000);
+	sprintf (buffer + 60, "VOLTAGE: %3.0f        ", voltage);
+
 	hw.print(buffer);
-
-
 }
 
 DisplayHW::DisplayHW() {
-	/*
-	#define LCD_Background_Illumination_GPIO_Port GPIOA
-	#define LCD_Background_Illumination_Pin GPIO_PIN_12
-	*/
-
 	delay_ms(40);
 	command(0x30);
 	delay_ms(5);
@@ -61,7 +86,7 @@ DisplayHW::DisplayHW() {
 	delay_ms(1);
 	command(0x38); // Function set 8-bit/2-line
 	command(0x10); // Set cursor
-	command(0x0c | 0x02); // Display ON; Cursor OFF
+	command(0x0c); // Display ON; Cursor OFF
 	command(0x06); // Entry mode set
 }
 
@@ -89,10 +114,8 @@ void DisplayHW::set_address(uint8_t address) {
 }
 
 void DisplayHW::delay_300ns() {
-	HAL_Delay(1);
-	return;
 	uint32_t i = 0;
-	while(i++ < 100) {
+	while(i++ < 2500) {
 		__asm__("nop");
 	}
 }

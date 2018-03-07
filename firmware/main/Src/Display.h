@@ -36,8 +36,15 @@ private:
 
 	void refresh(void);
 
+	float hit_miss;
+	float depth;
+	float depth_max;
+	float ton;
+	float toff;
+	float voltage;
+
 	DisplayHW hw;
-	char buffer[80];
+	char buffer[81]; // One extra for 0 ending
 	uint32_t tick_timeout;
 };
 
