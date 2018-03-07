@@ -10,19 +10,13 @@
 #include <stdio.h>
 #include <string.h>
 
-Display::Display() {
-	// TODO Auto-generated constructor stub
+Display::Display(EdmState *_edm_state) {
+	edm_state = _edm_state;
+
 	tick_timeout = 0;
 	for (int i = 0; i < 80; i++) {
 		buffer[i] = ' ';
 	}
-
-	hit_miss = 0.75;
-	depth = 0.03;
-	depth_max = 0.5;
-	ton = 0.000015;
-	toff = 0.000120;
-	voltage = 250;
 
 	// Backlight on
 	HAL_GPIO_WritePin(LCD_Background_Illumination_GPIO_Port, LCD_Background_Illumination_Pin, GPIO_PIN_SET);
@@ -40,12 +34,6 @@ void Display::work() {
 
 	if (tick > tick_timeout) {
 
-		hit_miss += 0.1;
-		if (hit_miss > 1) hit_miss = 0;
-
-		depth += 0.01;
-		if (depth > depth_max) depth = 0;
-
 
 
 		refresh();
@@ -58,7 +46,7 @@ void Display::work() {
 
 void Display::refresh() {
 
-	//HIT: XXXXXXXXXXXXXXX
+    //HIT: XXXXXXXXXXXXXXX
 	//DEPTH:  0.05 /  0.50
 	//TON: 150 TOFF: 1500
 	//VTG: 250 V
@@ -66,12 +54,12 @@ void Display::refresh() {
 	memset(buffer, ' ', 80);
 	sprintf (buffer, "HIT: ");
 	buffer[5] = ' ';
-	for (int i = 0; i < hit_miss * 15 + 0.5; i++) {
+	for (int i = 0; i < edm_state->hit_miss * 15 + 0.5; i++) {
 		buffer[i + 5] = 0xFF;
 	}
-	sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", depth, depth_max);
-	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", ton * 1000000, toff * 1000000);
-	sprintf (buffer + 60, "VOLTAGE: %3.0f        ", voltage);
+	sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", edm_state->depth, edm_state->depth_max);
+	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", edm_state->ton * 1000000, edm_state->toff * 1000000);
+	sprintf (buffer + 60, "VOLTAGE: %3.0f        ", edm_state->voltage);
 
 	hw.print(buffer);
 }
