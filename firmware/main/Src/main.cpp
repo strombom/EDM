@@ -44,29 +44,11 @@
 
 #include "EdmState.h"
 #include "Display.h"
+#include "UserInput.h"
 
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-
-/* USER CODE BEGIN PFP */
-/* Private function prototypes -----------------------------------------------*/
-
-/* USER CODE END PFP */
-
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
 
 /**
  * @brief  The application entry point.
@@ -75,40 +57,23 @@ void SystemClock_Config(void);
  */
 int main(void)
 {
-    /* USER CODE BEGIN 1 */
-
-    /* USER CODE END 1 */
-
     /* Enable I-Cache-------------------------------------------------------------*/
     SCB_EnableICache();
 
     /* Enable D-Cache-------------------------------------------------------------*/
     SCB_EnableDCache();
 
-    /* MCU Configuration----------------------------------------------------------*/
-
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     HAL_Init();
 
-    /* USER CODE BEGIN Init */
-
-    /* USER CODE END Init */
-
     /* Configure the system clock */
     SystemClock_Config();
-
-    /* USER CODE BEGIN SysInit */
-
-    /* USER CODE END SysInit */
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
     MX_ADC1_Init();
     MX_TIM4_Init();
     MX_TIM12_Init();
-    /* USER CODE BEGIN 2 */
-
-    /* USER CODE END 2 */
 
     EdmState edm_state;
     Display display(&edm_state);
@@ -116,30 +81,24 @@ int main(void)
     uint32_t tick_timeout = 0;
 
     /* Infinite loop */
-    /* USER CODE BEGIN WHILE */
     while (1)
     {
 
-        /* USER CODE END WHILE */
+        if (HAL_GetTick() > tick_timeout) {
 
-        /* USER CODE BEGIN 3 */
+            edm_state.hit_miss += 0.1;
+            if (edm_state.hit_miss > 1) edm_state.hit_miss = 0;
+
+            edm_state.depth += 0.01;
+            if (edm_state.depth > edm_state.depth_max) edm_state.depth = 0;
 
 
+            tick_timeout += 38;
+        }
 
         display.work();
 
-
-        edm_state.hit_miss += 0.1;
-        if (edm_state.hit_miss > 1) edm_state.hit_miss = 0;
-
-        edm_state.depth += 0.01;
-        if (edm_state.depth > edm_state.depth_max) edm_state.depth = 0;
-
-
-
     }
-    /* USER CODE END 3 */
-
 }
 
 /**

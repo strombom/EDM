@@ -8,8 +8,9 @@
 #ifndef DISPLAY_H_
 #define DISPLAY_H_
 
-#include "stm32f7xx_hal.h"
 #include "EdmState.h"
+
+#include <stdint.h>
 
 class DisplayHW {
 public:
@@ -34,12 +35,9 @@ public:
     void work(void);
 
 private:
-
-    EdmState *edm_state;
-
     void refresh(void);
 
-
+    EdmState *edm_state;
     DisplayHW hw;
     char buffer[81]; // One extra for 0 ending
     uint32_t tick_timeout;

@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "stm32f7xx_hal.h"
+
 Display::Display(EdmState *_edm_state) {
 	edm_state = _edm_state;
 
