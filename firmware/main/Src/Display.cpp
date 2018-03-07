@@ -61,7 +61,7 @@ void Display::refresh() {
 	}
 	sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", edm_state->depth, edm_state->depth_max);
 	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", edm_state->ton * 1000000, edm_state->toff * 1000000);
-	sprintf (buffer + 60, "VOLTAGE: %3.0f        ", edm_state->voltage);
+	sprintf (buffer + 60, "VOLTAGE: %3.0f V      ", edm_state->voltage);
 
 	hw.print(buffer);
 }

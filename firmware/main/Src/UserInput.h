@@ -8,10 +8,21 @@
 #ifndef USERINPUT_H_
 #define USERINPUT_H_
 
+#include "EdmState.h"
+
+#include "stdint.h"
+
 class UserInput {
 public:
-    UserInput();
+    UserInput(EdmState *_edm_state);
     virtual ~UserInput();
+
+    void work(void);
+
+private:
+    EdmState *edm_state;
+
+    const static uint32_t adc_channels[];
 };
 
 #endif /* USERINPUT_H_ */
