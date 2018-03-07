@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/development/github/EDM/firmware/cube/EDM/Inc
+HeaderPath=C:/development/github/EDM/firmware/main/Inc
 HeaderFiles=gpio.h;adc.h;tim.h;stm32f7xx_it.h;stm32f7xx_hal_conf.h;main.h;
-SourcePath=C:/development/github/EDM/firmware/cube/EDM/Src
+SourcePath=C:/development/github/EDM/firmware/main/Src
 SourceFiles=gpio.c;adc.c;tim.c;stm32f7xx_it.c;stm32f7xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

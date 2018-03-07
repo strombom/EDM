@@ -16,11 +16,16 @@ Display::Display() {
 		buffer[i] = ' ';
 	}
 
-	sprintf(buffer, "hello");
+	sprintf(buffer, "Test");
+
+	// Backlight on
+	HAL_GPIO_WritePin(LCD_Background_Illumination_GPIO_Port, LCD_Background_Illumination_Pin, GPIO_PIN_SET);
 }
 
 Display::~Display() {
-	// TODO Auto-generated destructor stub
+
+	// Backlight off
+	HAL_GPIO_WritePin(LCD_Background_Illumination_GPIO_Port, LCD_Background_Illumination_Pin, GPIO_PIN_RESET);
 }
 
 void Display::work() {
@@ -37,6 +42,8 @@ void Display::work() {
 
 void Display::refresh() {
 	hw.print(buffer);
+
+
 }
 
 DisplayHW::DisplayHW() {
@@ -54,7 +61,7 @@ DisplayHW::DisplayHW() {
 	delay_ms(1);
 	command(0x38); // Function set 8-bit/2-line
 	command(0x10); // Set cursor
-	command(0x0c); // Display ON; Cursor OFF
+	command(0x0c | 0x02); // Display ON; Cursor OFF
 	command(0x06); // Entry mode set
 }
 
@@ -78,10 +85,12 @@ void DisplayHW::print(char* string) {
 }
 
 void DisplayHW::set_address(uint8_t address) {
-	command((address & 0x3F) | 0x40);
+	command((address & 0x7F) | 0x80);
 }
 
 void DisplayHW::delay_300ns() {
+	HAL_Delay(1);
+	return;
 	uint32_t i = 0;
 	while(i++ < 100) {
 		__asm__("nop");
