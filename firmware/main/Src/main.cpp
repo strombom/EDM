@@ -45,6 +45,7 @@
 #include "EdmState.h"
 #include "Display.h"
 #include "UserInput.h"
+#include "WaterPump.h"
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,6 +79,7 @@ int main(void)
     EdmState edm_state;
     Display display(&edm_state);
     UserInput user_input(&edm_state);
+    WaterPump water_pump(&edm_state);
 
     uint32_t tick_timeout = 0;
 
@@ -99,6 +101,7 @@ int main(void)
 
         display.work();
         user_input.work();
+        water_pump.work();
 
     }
 }

@@ -62,6 +62,9 @@ void UserInput::work(void) {
             uint32_t val = 4095 - HAL_ADC_GetValue(&hadc1);
 
             if (adc_channel == 0) {
+            	float r = val / 4096.0f;
+
+            	edm_state->water_pump_duty_cycle = r;
 
             } else if (adc_channel == 1) {
                 if (val > 3071 + 200) {

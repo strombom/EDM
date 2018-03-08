@@ -19,6 +19,7 @@ public:
     float ton;
     float toff;
     float voltage;
+    float water_pump_duty_cycle;
 };
 
 #endif /* EDMSTATE_H_ */

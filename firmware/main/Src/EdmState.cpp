@@ -16,9 +16,10 @@ EdmState::EdmState() {
     ton = 0.000015;
     toff = 0.000120;
     voltage = 250;
+    water_pump_duty_cycle = 0;
 }
 
 EdmState::~EdmState() {
-    // TODO Auto-generated destructor stub
+
 }
 
