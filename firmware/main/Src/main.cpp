@@ -47,6 +47,7 @@
 #include "UserInput.h"
 #include "WaterPump.h"
 #include "StepperMotor.h"
+#include "PowerBoard.h"
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -82,6 +83,7 @@ int main(void)
     UserInput user_input(&edm_state);
     StepperMotor stepper_motor(&edm_state);
     WaterPump water_pump(&edm_state);
+    PowerBoard power_board(&edm_state);
 
     uint32_t tick_timeout = 0;
 
@@ -105,6 +107,7 @@ int main(void)
         user_input.work();
         water_pump.work();
         stepper_motor.work();
+        power_board.work();
 
     }
 }

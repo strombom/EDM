@@ -86,7 +86,7 @@ void UserInput::work(void) {
                 } else if (val < 2047 - 200 && val > 1024 + 200) {
                     edm_state->voltage = 150;
 
-                } else if (val < 1024 - 200 && val > 0 + 200) {
+                } else if (val < 1024 - 200) {
                     edm_state->voltage = 100;
                 }
 
