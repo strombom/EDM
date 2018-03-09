@@ -63,6 +63,27 @@ void Display::refresh() {
 	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", edm_state->ton * 1000000, edm_state->toff * 1000000);
 	sprintf (buffer + 60, "VOLTAGE: %3.0f V      ", edm_state->voltage);
 
+	if (edm_state->button_1_depressed) {
+		buffer[76] = 'S';
+	} else {
+		buffer[76] = 'R';
+	}
+	if (edm_state->button_2_depressed) {
+		buffer[77] = 'S';
+	} else {
+		buffer[77] = 'R';
+	}
+	if (edm_state->button_3_depressed) {
+		buffer[78] = 'S';
+	} else {
+		buffer[78] = 'R';
+	}
+	if (edm_state->button_4_depressed) {
+		buffer[79] = 'S';
+	} else {
+		buffer[79] = 'R';
+	}
+
 	hw.print(buffer);
 }
 

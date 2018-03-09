@@ -17,6 +17,11 @@ EdmState::EdmState() {
     toff = 0.000120;
     voltage = 250;
     water_pump_duty_cycle = 0;
+
+    button_1_depressed = false;
+    button_2_depressed = false;
+    button_3_depressed = false;
+    button_4_depressed = false;
 }
 
 EdmState::~EdmState() {

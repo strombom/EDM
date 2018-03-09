@@ -73,8 +73,9 @@ void MX_GPIO_Init(void)
             |LCD_RW_Pin|LCD_RS_Pin|LCD_Background_Illumination_Pin|LCD_DB7_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pin Output Level */
-    HAL_GPIO_WritePin(GPIOB, EDM_Spark_Voltage_2_Pin|EDM_Spark_Voltage_1_Pin|EDM_Spark_Voltage_0_Pin|Stepper_EN_Pin
-            |Stepper_DIR_Pin|LCD_DB3_Pin|LCD_DB2_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, EDM_Spark_Voltage_2_Pin|EDM_Spark_Voltage_1_Pin|EDM_Spark_Voltage_0_Pin|Stepper_DIR_Pin
+    		|LCD_DB3_Pin|LCD_DB2_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_SET);
 
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(GPIOC, LCD_DB1_Pin|LCD_DB6_Pin|LCD_DB5_Pin|LCD_DB4_Pin, GPIO_PIN_RESET);

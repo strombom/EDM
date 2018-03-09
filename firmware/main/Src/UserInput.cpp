@@ -12,30 +12,40 @@
 
 #include <math.h>
 
-/*
-#define Button_1_Pin GPIO_PIN_15
-#define Button_1_GPIO_Port GPIOB
-#define Button_2_Pin GPIO_PIN_6
-#define Button_2_GPIO_Port GPIOC
-#define Button_3_Pin GPIO_PIN_7
-#define Button_3_GPIO_Port GPIOC
-#define Button_4_Pin GPIO_PIN_8
-#define Button_4_GPIO_Port GPIOC
-*/
+const uint32_t UserInput::adc_channels[] = {ADC_CHANNEL_10, ADC_CHANNEL_11, ADC_CHANNEL_12, ADC_CHANNEL_13};
 
 UserInput::UserInput(EdmState *_edm_state) {
     edm_state = _edm_state;
-
 }
 
 UserInput::~UserInput() {
 
 }
 
-
-const uint32_t UserInput::adc_channels[] = {ADC_CHANNEL_10, ADC_CHANNEL_11, ADC_CHANNEL_12, ADC_CHANNEL_13};
-
 void UserInput::work(void) {
+	if (HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin) == GPIO_PIN_SET) {
+		edm_state->button_1_depressed = false;
+	} else {
+		edm_state->button_1_depressed = true;
+	}
+
+	if (HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin) == GPIO_PIN_SET) {
+		edm_state->button_2_depressed = false;
+	} else {
+		edm_state->button_2_depressed = true;
+	}
+
+	if (HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin) == GPIO_PIN_SET) {
+		edm_state->button_3_depressed = false;
+	} else {
+		edm_state->button_3_depressed = true;
+	}
+
+	if (HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin) == GPIO_PIN_SET) {
+		edm_state->button_4_depressed = false;
+	} else {
+		edm_state->button_4_depressed = true;
+	}
 
     static int adc_channel = 0;
     static bool adc_running = false;
@@ -108,12 +118,4 @@ void UserInput::work(void) {
         }
 
     }
-
-
-/*
-    PC0     ------> ADC1_IN10
-    PC1     ------> ADC1_IN11
-    PC2     ------> ADC1_IN12
-    PC3     ------> ADC1_IN13
-    */
 }

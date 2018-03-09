@@ -20,6 +20,11 @@ public:
     float toff;
     float voltage;
     float water_pump_duty_cycle;
+
+    bool button_1_depressed;
+    bool button_2_depressed;
+    bool button_3_depressed;
+    bool button_4_depressed;
 };
 
 #endif /* EDMSTATE_H_ */

@@ -13,23 +13,20 @@
 WaterPump::WaterPump(EdmState *_edm_state) {
     edm_state = _edm_state;
 
-
-	//htim4.Instance->ARR = 1000;
-	//htim4.Init.Period = 50;
-
-	//TIMx->CCR1 = OC_Config->Pulse;
-
-    //HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
-
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 }
 
 WaterPump::~WaterPump() {
-
+    TIM4->CCR1 = 0;
 }
 
-
 void WaterPump::work(void) {
-
-
-
+	unsigned int pulse;
+	pulse = edm_state->water_pump_duty_cycle / 4 * TIM4->ARR;
+	if (pulse < 50) {
+		pulse = 0;
+	} else if (pulse > TIM4->ARR - 50) {
+		pulse = TIM4->ARR;
+	}
+    TIM4->CCR1 = pulse;
 }
