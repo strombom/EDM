@@ -621,9 +621,9 @@ Output_250V_Enable
 Text HLabel 5800 2900 2    50   Input ~ 0
 Output_20V_Enable
 Text HLabel 5800 2800 2    50   Input ~ 0
-Short_Circuit
-Text HLabel 5800 2700 2    50   Input ~ 0
 Breakdown
+Text HLabel 5800 2700 2    50   Input ~ 0
+Short_Circuit
 $Comp
 L Device:R R207
 U 1 1 5AA182B5

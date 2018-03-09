@@ -919,9 +919,9 @@ Wire Wire Line
 Text HLabel 1650 4750 0    50   Input ~ 0
 Output_20V_Enable
 Text HLabel 1650 4850 0    50   Input ~ 0
-Short_Circuit
-Text HLabel 1650 4950 0    50   Input ~ 0
 Breakdown
+Text HLabel 1650 4950 0    50   Input ~ 0
+Short_Circuit
 Wire Wire Line
 	1650 4950 2000 4950
 Wire Wire Line

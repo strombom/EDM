@@ -35,9 +35,9 @@ Output_250V_Enable
 Text HLabel 6400 2650 2    50   Input ~ 0
 Output_20V_Enable
 Text HLabel 6400 2750 2    50   Input ~ 0
-Short_Circuit
-Text HLabel 6400 2850 2    50   Input ~ 0
 Breakdown
+Text HLabel 6400 2850 2    50   Input ~ 0
+Short_Circuit
 Text HLabel 6400 2150 2    50   Input ~ 0
 Spark_Voltage_0
 Text HLabel 6400 2250 2    50   Input ~ 0

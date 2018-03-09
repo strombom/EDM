@@ -35,9 +35,9 @@ Output_250V_Enable
 Text HLabel 4550 2850 2    50   Input ~ 0
 Output_20V_Enable
 Text HLabel 4550 2950 2    50   Input ~ 0
-Short_Circuit
-Text HLabel 4550 3050 2    50   Input ~ 0
 Breakdown
+Text HLabel 4550 3050 2    50   Input ~ 0
+Short_Circuit
 Text HLabel 4550 2350 2    50   Input ~ 0
 Spark_Voltage_0
 Text HLabel 4550 2450 2    50   Input ~ 0
