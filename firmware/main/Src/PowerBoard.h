@@ -10,6 +10,8 @@
 
 #include "EdmState.h"
 
+#include <stdint.h>
+
 class PowerBoard {
 public:
 	PowerBoard(EdmState *_edm_state);
@@ -19,6 +21,7 @@ public:
 
 private:
     EdmState *edm_state;
+    uint32_t tick_timeout;
 };
 
 #endif /* POWERBOARD_H_ */

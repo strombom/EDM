@@ -22,6 +22,10 @@ EdmState::EdmState() {
     button_2_depressed = false;
     button_3_depressed = false;
     button_4_depressed = false;
+
+    short_circuit = false;
+    breakdown = false;
+    spark_voltage_status = false;
 }
 
 EdmState::~EdmState() {

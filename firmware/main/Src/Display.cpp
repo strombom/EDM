@@ -33,13 +33,8 @@ Display::~Display() {
 void Display::work() {
 	uint32_t tick = HAL_GetTick();
 
-
 	if (tick > tick_timeout) {
-
-
-
 		refresh();
-
 		while (tick > tick_timeout) {
 			tick_timeout += 50;
 		}
@@ -61,8 +56,31 @@ void Display::refresh() {
 	}
 	sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", edm_state->depth, edm_state->depth_max);
 	sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", edm_state->ton * 1000000, edm_state->toff * 1000000);
-	sprintf (buffer + 60, "VOLTAGE: %3.0f V      ", edm_state->voltage);
+	sprintf (buffer + 60, "VTG: %3.0f V          ", edm_state->voltage);
 
+
+	if (edm_state->short_circuit) {
+		buffer[72] = 'S';
+		buffer[73] = 'S';
+	}
+
+	if (edm_state->breakdown) {
+		buffer[75] = 'B';
+		buffer[76] = 'D';
+	}
+
+	if (edm_state->spark_voltage_status) {
+		buffer[78] = 'S';
+		buffer[79] = 'V';
+	}
+
+	/*
+    short_circuit = false;
+    breakdown = false;
+    spark_voltage_status = false;
+    */
+
+	/*
 	if (edm_state->button_1_depressed) {
 		buffer[76] = 'S';
 	} else {
@@ -83,6 +101,7 @@ void Display::refresh() {
 	} else {
 		buffer[79] = 'R';
 	}
+	*/
 
 	hw.print(buffer);
 }

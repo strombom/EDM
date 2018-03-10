@@ -25,6 +25,10 @@ public:
     bool button_2_depressed;
     bool button_3_depressed;
     bool button_4_depressed;
+
+    bool short_circuit;
+    bool breakdown;
+    bool spark_voltage_status;
 };
 
 #endif /* EDMSTATE_H_ */

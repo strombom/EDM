@@ -140,14 +140,16 @@ void SystemClock_Config(void)
     RCC_OscInitStruct.PLL.PLLQ = 2;
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
-        _Error_Handler(__FILE__, __LINE__);
+    	char file[] = __FILE__;
+        _Error_Handler(file, __LINE__);
     }
 
     /**Activate the Over-Drive mode 
      */
     if (HAL_PWREx_EnableOverDrive() != HAL_OK)
     {
-        _Error_Handler(__FILE__, __LINE__);
+    	char file[] = __FILE__;
+        _Error_Handler(file, __LINE__);
     }
 
     /**Initializes the CPU, AHB and APB busses clocks 
@@ -161,7 +163,8 @@ void SystemClock_Config(void)
 
     if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK)
     {
-        _Error_Handler(__FILE__, __LINE__);
+    	char file[] = __FILE__;
+        _Error_Handler(file, __LINE__);
     }
 
     /**Enables the Clock Security System 
