@@ -81,7 +81,7 @@ void MX_GPIO_Init(void)
     HAL_GPIO_WritePin(GPIOC, LCD_DB1_Pin|LCD_DB6_Pin|LCD_DB5_Pin|LCD_DB4_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pins : PAPin PAPin */
-    GPIO_InitStruct.Pin = EDM_Breakdown_Pin|EDM_Sort_Circuit_Pin;
+    GPIO_InitStruct.Pin = EDM_Breakdown_Pin|EDM_Short_Circuit_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLDOWN;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);

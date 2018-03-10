@@ -57,10 +57,10 @@
 #define POT_3_GPIO_Port GPIOC
 #define POT_4_Pin GPIO_PIN_3
 #define POT_4_GPIO_Port GPIOC
-#define EDM_Breakdown_Pin GPIO_PIN_4
+#define EDM_Short_Circuit_Pin GPIO_PIN_4
+#define EDM_Short_Circuit_GPIO_Port GPIOA
+#define EDM_Breakdown_Pin GPIO_PIN_5
 #define EDM_Breakdown_GPIO_Port GPIOA
-#define EDM_Sort_Circuit_Pin GPIO_PIN_5
-#define EDM_Sort_Circuit_GPIO_Port GPIOA
 #define EDM_Output_20V_Enable_Pin GPIO_PIN_6
 #define EDM_Output_20V_Enable_GPIO_Port GPIOA
 #define EDM_Output_250V_Enable_Pin GPIO_PIN_7
