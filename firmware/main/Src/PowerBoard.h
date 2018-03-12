@@ -21,7 +21,7 @@ public:
 
 private:
     EdmState *edm_state;
-    uint32_t tick_timeout;
+    uint32_t t_off_timeout;
 };
 
 #endif /* POWERBOARD_H_ */

@@ -91,10 +91,17 @@ int main(void)
     while (1)
     {
 
+        if (HAL_GetTick() > 4000000000) {
+            // Restart mcu before tick overflows
+            // Future improvement: increase tick size to 64 bits
+            NVIC_SystemReset();
+        }
+
+
         if (HAL_GetTick() > tick_timeout) {
 
-            edm_state.hit_miss += 0.1;
-            if (edm_state.hit_miss > 1) edm_state.hit_miss = 0;
+            //edm_state.hit_miss += 0.1;
+            //if (edm_state.hit_miss > 1) edm_state.hit_miss = 0;
 
             edm_state.depth += 0.01;
             if (edm_state.depth > edm_state.depth_max) edm_state.depth = 0;
@@ -140,7 +147,7 @@ void SystemClock_Config(void)
     RCC_OscInitStruct.PLL.PLLQ = 2;
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
-    	char file[] = __FILE__;
+        char file[] = __FILE__;
         _Error_Handler(file, __LINE__);
     }
 
@@ -148,7 +155,7 @@ void SystemClock_Config(void)
      */
     if (HAL_PWREx_EnableOverDrive() != HAL_OK)
     {
-    	char file[] = __FILE__;
+        char file[] = __FILE__;
         _Error_Handler(file, __LINE__);
     }
 
@@ -163,7 +170,7 @@ void SystemClock_Config(void)
 
     if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK)
     {
-    	char file[] = __FILE__;
+        char file[] = __FILE__;
         _Error_Handler(file, __LINE__);
     }
 

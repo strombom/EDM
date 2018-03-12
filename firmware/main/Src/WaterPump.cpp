@@ -21,12 +21,12 @@ WaterPump::~WaterPump() {
 }
 
 void WaterPump::work(void) {
-	unsigned int pulse;
-	pulse = edm_state->water_pump_duty_cycle / 4 * TIM4->ARR;
-	if (pulse < 50) {
-		pulse = 0;
-	} else if (pulse > TIM4->ARR - 50) {
-		pulse = TIM4->ARR;
-	}
+    unsigned int pulse;
+    pulse = edm_state->water_pump_duty_cycle / 4 * TIM4->ARR;
+    if (pulse < 50) {
+        pulse = 0;
+    } else if (pulse > TIM4->ARR - 50) {
+        pulse = TIM4->ARR;
+    }
     TIM4->CCR1 = pulse;
 }

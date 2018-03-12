@@ -12,8 +12,8 @@
 
 class WaterPump {
 public:
-	WaterPump(EdmState *_edm_state);
-	virtual ~WaterPump();
+    WaterPump(EdmState *_edm_state);
+    virtual ~WaterPump();
 
     void work(void);
 

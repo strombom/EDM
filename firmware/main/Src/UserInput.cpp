@@ -23,29 +23,29 @@ UserInput::~UserInput() {
 }
 
 void UserInput::work(void) {
-	if (HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin) == GPIO_PIN_SET) {
-		edm_state->button_1_depressed = false;
-	} else {
-		edm_state->button_1_depressed = true;
-	}
+    if (HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin) == GPIO_PIN_SET) {
+        edm_state->button_1_depressed = false;
+    } else {
+        edm_state->button_1_depressed = true;
+    }
 
-	if (HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin) == GPIO_PIN_SET) {
-		edm_state->button_2_depressed = false;
-	} else {
-		edm_state->button_2_depressed = true;
-	}
+    if (HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin) == GPIO_PIN_SET) {
+        edm_state->button_2_depressed = false;
+    } else {
+        edm_state->button_2_depressed = true;
+    }
 
-	if (HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin) == GPIO_PIN_SET) {
-		edm_state->button_3_depressed = false;
-	} else {
-		edm_state->button_3_depressed = true;
-	}
+    if (HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin) == GPIO_PIN_SET) {
+        edm_state->button_3_depressed = false;
+    } else {
+        edm_state->button_3_depressed = true;
+    }
 
-	if (HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin) == GPIO_PIN_SET) {
-		edm_state->button_4_depressed = false;
-	} else {
-		edm_state->button_4_depressed = true;
-	}
+    if (HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin) == GPIO_PIN_SET) {
+        edm_state->button_4_depressed = false;
+    } else {
+        edm_state->button_4_depressed = true;
+    }
 
     static int adc_channel = 0;
     static bool adc_running = false;
@@ -72,9 +72,9 @@ void UserInput::work(void) {
             uint32_t val = 4095 - HAL_ADC_GetValue(&hadc1);
 
             if (adc_channel == 0) {
-            	float r = val / 4096.0f;
+                float r = val / 4096.0f;
 
-            	edm_state->water_pump_duty_cycle = r;
+                edm_state->water_pump_duty_cycle = r;
 
             } else if (adc_channel == 1) {
                 if (val > 3071 + 200) {

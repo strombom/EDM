@@ -74,14 +74,16 @@ void MX_GPIO_Init(void)
 
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(GPIOB, EDM_Spark_Voltage_2_Pin|EDM_Spark_Voltage_1_Pin|EDM_Spark_Voltage_0_Pin|Stepper_DIR_Pin
-    		|LCD_DB3_Pin|LCD_DB2_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_SET);
+            |LCD_DB3_Pin|LCD_DB2_Pin, GPIO_PIN_RESET);
+
+    /*Configure GPIO pin Output Level */
+    HAL_GPIO_WritePin(Stepper_EN_GPIO_Port, Stepper_EN_Pin, GPIO_PIN_SET);
 
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(GPIOC, LCD_DB1_Pin|LCD_DB6_Pin|LCD_DB5_Pin|LCD_DB4_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pins : PAPin PAPin */
-    GPIO_InitStruct.Pin = EDM_Breakdown_Pin|EDM_Short_Circuit_Pin;
+    GPIO_InitStruct.Pin = EDM_Short_Circuit_Pin|EDM_Breakdown_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLDOWN;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
