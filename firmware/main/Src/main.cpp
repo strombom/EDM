@@ -76,6 +76,7 @@ int main(void)
     MX_GPIO_Init();
     MX_ADC1_Init();
     MX_TIM4_Init();
+    MX_TIM9_Init();
     MX_TIM12_Init();
 
     EdmState edm_state;
