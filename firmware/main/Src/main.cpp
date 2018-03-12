@@ -53,6 +53,9 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 
+
+extern "C" void initialise_monitor_handles(void);
+
 /**
  * @brief  The application entry point.
  *
@@ -87,6 +90,8 @@ int main(void)
     PowerBoard power_board(&edm_state);
 
     uint32_t tick_timeout = 0;
+
+    initialise_monitor_handles();
 
     /* Infinite loop */
     while (1)

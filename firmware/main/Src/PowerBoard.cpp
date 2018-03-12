@@ -7,11 +7,16 @@
 
 #include "PowerBoard.h"
 
+#include "tim.h"
 #include "stm32f7xx_hal.h"
+
+#include "stdio.h"
 
 PowerBoard::PowerBoard(EdmState *_edm_state) {
     edm_state = _edm_state;
-    t_off_timeout = 0;
+
+    HAL_TIM_Base_Stop(&htim9);
+    htim9.Instance->ARR = 100;
 
     HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port, EDM_Output_20V_Enable_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
@@ -35,10 +40,51 @@ void __attribute__((optimize("O0"))) delay_us(uint32_t us) {
     }
 }
 
+bool t_off_timeout(void) {
+    if(__HAL_TIM_GET_FLAG(&htim9, TIM_FLAG_UPDATE) != RESET)
+    {
+        HAL_TIM_Base_Stop(&htim9);
+        __HAL_TIM_CLEAR_IT(&htim9, TIM_IT_UPDATE);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void t_off_start_us(uint32_t us) {
+    HAL_TIM_Base_Stop(&htim9);
+
+    __HAL_TIM_SET_COUNTER(&htim9, 0);
+    //printf("cntr5 %lu\n", htim9.Instance->CNT);
+
+    __HAL_TIM_SET_AUTORELOAD(&htim9, us);
+
+    //htim9.Instance->ARR = us;
+    //htim9.Instance->CCR1 = us;
+
+    //printf("prestart %lu\n", htim9.Instance->CR1);
+
+    HAL_TIM_Base_Start(&htim9);
+
+    //printf("poststart %lu\n", htim9.Instance->CR1);
+
+
+}
+
+bool t_off_is_running(void) {
+    bool r = false;
+    if (htim9.Instance->CR1 & TIM_CR1_CEN) {
+        r = true;
+    } else {
+        r = false;
+    }
+
+    //printf("hello world! %lu\n", htim9.Instance->CR1);
+
+    return r;
+}
+
 void PowerBoard::work(void) {
-    uint32_t work_tick = HAL_GetTick();
-
-
     if (edm_state->voltage == 100) {
         HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
@@ -82,19 +128,24 @@ void PowerBoard::work(void) {
     }
 
 
-    if (work_tick > t_off_timeout) {
+    if (t_off_timeout()) {
 
         HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
-        delay_us(100);
+
+        delay_us(edm_state->ton * 1000000);
+
         HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
         HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
-        delay_us(100);
 
 
-
-        t_off_timeout = HAL_GetTick() + edm_state->toff;
     }
+
+    if (!t_off_is_running()) {
+        t_off_start_us(edm_state->toff * 1000000);
+    }
+
+
 
 
 
