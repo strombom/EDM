@@ -98,7 +98,7 @@ void UserInput::work(void) {
                 t = (ton + 1) / 100;
                 t = pow(t, 1.5) + 1;
 
-                edm_state->ton = t / 1000000.0f;
+                edm_state->ton = t;
 
             } else if (adc_channel == 3) {
                 static float toff = 0;
@@ -110,7 +110,7 @@ void UserInput::work(void) {
                 t = rint(t / 10) * 10 + 10;
                 //t = t * 15;
 
-                edm_state->toff = t / 1000000.0f;
+                edm_state->toff = t;
             }
 
             adc_running = false;

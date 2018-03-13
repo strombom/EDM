@@ -133,7 +133,7 @@ void PowerBoard::work(void) {
         HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
 
-        delay_us(edm_state->ton * 1000000);
+        delay_us(edm_state->ton);
 
         HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
         HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
@@ -142,7 +142,7 @@ void PowerBoard::work(void) {
     }
 
     if (!t_off_is_running()) {
-        t_off_start_us(edm_state->toff * 1000000);
+        t_off_start_us(edm_state->toff);
     }
 
 

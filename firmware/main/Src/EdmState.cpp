@@ -13,9 +13,9 @@ EdmState::EdmState() {
     hit_miss = 0.75;
     depth = 0.03;
     depth_max = 0.5;
-    ton = 0.000015;
-    toff = 0.000120;
-    voltage = 250;
+    ton = 15;
+    toff = 120;
+    voltage = 100;
     water_pump_duty_cycle = 0;
 
     button_1_depressed = false;

@@ -8,6 +8,8 @@
 #ifndef EDMSTATE_H_
 #define EDMSTATE_H_
 
+#include "stdint.h"
+
 class EdmState {
 public:
     EdmState();
@@ -16,8 +18,8 @@ public:
     float hit_miss;
     float depth;
     float depth_max;
-    float ton;
-    float toff;
+    uint32_t ton;
+    uint32_t toff;
     float voltage;
     float water_pump_duty_cycle;
 

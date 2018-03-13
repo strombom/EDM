@@ -57,7 +57,7 @@ void Display::refresh() {
     //sprintf (buffer + 00, "%f                    ", edm_state->hit_miss);
 
     sprintf (buffer + 20, "DEPTH: %5.2f / %5.2f", edm_state->depth, edm_state->depth_max);
-    sprintf (buffer + 40, "TON: %4.0f TOFF: %4.0f", edm_state->ton * 1000000, edm_state->toff * 1000000);
+    sprintf (buffer + 40, "TON: %4lu TOFF: %4lu", edm_state->ton, edm_state->toff);
     sprintf (buffer + 60, "VTG: %3.0f V          ", edm_state->voltage);
 
 
