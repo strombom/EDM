@@ -1,0 +1,6 @@
+
+2018-03-13
+----------
+Patch cable soldered between NRST on J405 and R206
+
+

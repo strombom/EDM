@@ -1,0 +1,12 @@
+
+2018-03-13
+----------
+R617 changed to 10k
+R307 changed to 56k
+R608 changed to 22k
+R611 changed to 27k
+R304, R606 and R615 changed to 470R
+
+Patch cable soldered to +24V on U602
+
+
