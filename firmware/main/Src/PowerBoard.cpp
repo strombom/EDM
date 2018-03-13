@@ -32,9 +32,12 @@ PowerBoard::~PowerBoard() {
 }
 
 void __attribute__((optimize("O0"))) delay_us(uint32_t us) {
-    uint32_t cycles = us * 21.5f;
-    if (cycles > 7) cycles -= 7;
-    uint32_t i = 0;
+    uint32_t cycles = us;
+    cycles *= 21.5f;
+    //if (cycles > 7) {
+    //    cycles = cycles - 7;
+    //}
+    uint32_t i = 7;
     while(i++ < cycles) {
         __asm__("nop");
     }
@@ -67,8 +70,10 @@ void t_off_start_us(uint32_t us) {
     HAL_TIM_Base_Start(&htim9);
 
     //printf("poststart %lu\n", htim9.Instance->CR1);
+}
 
-
+void t_off_stop(void) {
+    HAL_TIM_Base_Stop(&htim9);
 }
 
 bool t_off_is_running(void) {
@@ -106,12 +111,6 @@ void PowerBoard::work(void) {
         HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
     }
 
-    if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_SET) {
-        edm_state->short_circuit = false;
-    } else {
-        edm_state->short_circuit = true;
-    }
-
     /*
 	if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_SET) {
 		edm_state->breakdown = false;
@@ -120,24 +119,87 @@ void PowerBoard::work(void) {
 	}
      */
 
+    static uint32_t spark_voltage_count = 0;
+
     if (HAL_GPIO_ReadPin(EDM_Spark_Voltage_Status_GPIO_Port, EDM_Spark_Voltage_Status_Pin) == GPIO_PIN_RESET) {
-        edm_state->spark_voltage_status = false;
+        spark_voltage_count = 0;
         return;
     } else {
+
+        if (spark_voltage_count < 10) {
+            spark_voltage_count += 1;
+        }
+    }
+
+    if (spark_voltage_count == 10) {
         edm_state->spark_voltage_status = true;
+    } else {
+        edm_state->spark_voltage_status = false;
     }
 
 
-    if (t_off_timeout()) {
+    if (t_off_timeout() && edm_state->spark_voltage_status) {
 
-        HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
 
-        delay_us(edm_state->ton);
+        HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port,  EDM_Output_250V_Enable_Pin,  GPIO_PIN_SET);
 
-        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
+        delay_us(2);
+        if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
 
+            HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port,  EDM_Output_250V_Enable_Pin,  GPIO_PIN_RESET);
+
+        } else {
+
+            //delay_us(edm_state->ton);
+            delay_us(1);
+            /*t_off_start_us(2);
+            while (!t_off_timeout()) {
+
+            }*/
+
+            bool has_breakdown = false;
+            t_off_start_us(100);
+            while (!t_off_timeout()) {
+                if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_RESET) {
+                    has_breakdown = true;
+                    break;
+                }
+            }
+
+            edm_state->breakdown = has_breakdown;
+
+            if (has_breakdown) {
+                HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
+
+                delay_us(1);
+
+                HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
+
+                t_off_start_us(edm_state->ton);
+                while (!t_off_timeout()) {
+                    //if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
+                    //    break;
+                    //}
+                }
+
+                HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
+
+            } else {
+                HAL_GPIO_WritePin(EDM_Output_250V_Enable_GPIO_Port, EDM_Output_250V_Enable_Pin, GPIO_PIN_RESET);
+            }
+
+        }
+
+
+        t_off_start_us(edm_state->toff);
+
+    } else {
+
+        if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_SET) {
+            edm_state->short_circuit = false;
+        } else {
+            edm_state->short_circuit = true;
+        }
 
     }
 

@@ -96,7 +96,11 @@ void UserInput::work(void) {
 
                 float t;
                 t = (ton + 1) / 100;
-                t = pow(t, 1.5) + 1;
+                t = pow(t, 1.861) + 1;
+
+                if (t > 999) {
+                    t = 999;
+                }
 
                 edm_state->ton = t;
 
@@ -107,7 +111,7 @@ void UserInput::work(void) {
                 float t;
                 t = toff / 10;
                 t = pow(t, 1.5) + 1;
-                t = rint(t / 10) * 10 + 10;
+                t = rint(t / 10) * 50 + 100;
                 //t = t * 15;
 
                 edm_state->toff = t;
