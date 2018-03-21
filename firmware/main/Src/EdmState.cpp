@@ -69,11 +69,23 @@ void EdmState::work(void) {
     } else if (work_state == EdmWorkState::FINDING) {
 
         if (button_3_depressed || HAL_GetTick() >= tick_timeout) {
-            tick_timeout = HAL_GetTick() + 500;
             work_state = EdmWorkState::STOP_RETRACT;
         }
 
+    } else if (work_state == EdmWorkState::FINDING_RETRACT) {
+        tick_timeout = HAL_GetTick() + 100;
+        work_state = EdmWorkState::FINDING_RETRACTING;
+
+    } else if (work_state == EdmWorkState::FINDING_RETRACTING) {
+        if (HAL_GetTick() >= tick_timeout) {
+            work_state = EdmWorkState::IDLE;
+        }
+
     } else if (work_state == EdmWorkState::STOP_RETRACT) {
+        tick_timeout = HAL_GetTick() + 500;
+        work_state = EdmWorkState::STOP_RETRACTING;
+
+    } else if (work_state == EdmWorkState::STOP_RETRACTING) {
         if (HAL_GetTick() >= tick_timeout) {
             work_state = EdmWorkState::IDLE;
         }

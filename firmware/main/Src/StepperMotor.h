@@ -15,12 +15,6 @@ public:
 	StepperMotor(EdmState *_edm_state);
 	virtual ~StepperMotor();
 
-    void work(void);
-
-private:
-    EdmState *edm_state;
-    EdmWorkState previous_work_state;
-
     enum class Direction {
         UP,
         DOWN
@@ -29,16 +23,12 @@ private:
     void setDirection(Direction direction);
     void setSpeed(uint32_t speed);
 
+    void work(void);
 
-/*
-    enum class State {
-      IDLE,
-      JOG_UP,
-      JOG_DOWN
-    };
+private:
+    EdmState *edm_state;
+    EdmWorkState previous_work_state;
 
-    State state;
-    */
 };
 
 #endif /* STEPPERMOTOR_H_ */

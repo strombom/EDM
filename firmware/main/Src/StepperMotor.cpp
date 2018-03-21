@@ -76,7 +76,12 @@ void StepperMotor::work(void) {
             setSpeed(150);
             setDirection(Direction::DOWN);
 
-        } else if (edm_state->work_state == EdmWorkState::STOP_RETRACT) {
+        } else if (edm_state->work_state == EdmWorkState::STOP_RETRACT ||
+                   edm_state->work_state == EdmWorkState::STOP_RETRACTING) {
+            setSpeed(150);
+            setDirection(Direction::UP);
+
+        } else if (edm_state->work_state == EdmWorkState::FINDING_RETRACTING) {
             setSpeed(150);
             setDirection(Direction::UP);
 

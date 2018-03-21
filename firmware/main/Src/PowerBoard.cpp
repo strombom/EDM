@@ -119,6 +119,17 @@ void PowerBoard::work(void) {
     }
 
 
+    if (edm_state->work_state == EdmWorkState::FINDING) {
+
+        if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
+            edm_state->work_state = EdmWorkState::FINDING_RETRACT;
+        }
+
+    } else if (edm_state->work_state == EdmWorkState::JOG_DOWN) {
+        if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
+            edm_state->work_state = EdmWorkState::STOP_RETRACT;
+        }
+    }
 
 
 
