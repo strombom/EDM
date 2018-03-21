@@ -19,7 +19,18 @@ public:
 
 private:
     EdmState *edm_state;
+    EdmWorkState previous_work_state;
 
+    enum class Direction {
+        UP,
+        DOWN
+    };
+
+    void setDirection(Direction direction);
+    void setSpeed(uint32_t speed);
+
+
+/*
     enum class State {
       IDLE,
       JOG_UP,
@@ -27,6 +38,7 @@ private:
     };
 
     State state;
+    */
 };
 
 #endif /* STEPPERMOTOR_H_ */

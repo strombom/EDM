@@ -10,10 +10,22 @@
 
 #include "stdint.h"
 
+
+enum class EdmWorkState {
+  IDLE,
+  JOG_UP,
+  JOG_DOWN,
+  FINDING,
+  STOP_RETRACT
+};
+
+
 class EdmState {
 public:
     EdmState();
     virtual ~EdmState();
+
+    void work(void);
 
     float hit_miss;
     float depth;
@@ -31,6 +43,8 @@ public:
     bool short_circuit;
     bool breakdown;
     bool spark_voltage_status;
+
+    EdmWorkState work_state;
 };
 
 #endif /* EDMSTATE_H_ */

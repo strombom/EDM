@@ -90,26 +90,39 @@ bool t_off_is_running(void) {
 }
 
 void PowerBoard::work(void) {
-    if (edm_state->voltage == 100) {
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
 
-    } else if (edm_state->voltage == 150) {
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_SET);
+    static uint32_t previous_spark_voltage = 0;
 
-    } else if (edm_state->voltage == 200) {
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
+    if (previous_spark_voltage != edm_state->voltage) {
+        previous_spark_voltage = edm_state->voltage;
 
-    } else if (edm_state->voltage == 250) {
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
+        if (edm_state->voltage == 100) {
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
+
+        } else if (edm_state->voltage == 150) {
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_SET);
+
+        } else if (edm_state->voltage == 200) {
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
+
+        } else if (edm_state->voltage == 250) {
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_0_GPIO_Port, EDM_Spark_Voltage_0_Pin, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_1_GPIO_Port, EDM_Spark_Voltage_1_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(EDM_Spark_Voltage_2_GPIO_Port, EDM_Spark_Voltage_2_Pin, GPIO_PIN_RESET);
+        }
     }
+
+
+
+
+
+
 
     /*
 	if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_SET) {
@@ -136,6 +149,8 @@ void PowerBoard::work(void) {
     } else {
         edm_state->spark_voltage_status = false;
     }
+
+
 
 
     if (t_off_timeout() && edm_state->spark_voltage_status) {

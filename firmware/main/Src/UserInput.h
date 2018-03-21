@@ -22,6 +22,7 @@ public:
 private:
     EdmState *edm_state;
 
+    uint32_t debounce_timeout;
     const static uint32_t adc_channels[];
 };
 

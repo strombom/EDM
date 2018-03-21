@@ -91,7 +91,7 @@ int main(void)
 
     uint32_t tick_timeout = 0;
 
-    initialise_monitor_handles();
+    //initialise_monitor_handles();
 
     /* Infinite loop */
     while (1)
@@ -116,11 +116,12 @@ int main(void)
             tick_timeout += 38;
         }
 
-        display.work();
         user_input.work();
+        edm_state.work();
         water_pump.work();
         stepper_motor.work();
         power_board.work();
+        display.work();
 
     }
 }

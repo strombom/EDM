@@ -12,7 +12,7 @@
 
 StepperMotor::StepperMotor(EdmState *_edm_state) {
     edm_state = _edm_state;
-    state = State::IDLE;
+    previous_work_state = edm_state->work_state;
 
     HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, Stepper_DIR_Pin, GPIO_PIN_RESET);
@@ -24,10 +24,32 @@ StepperMotor::~StepperMotor() {
     htim12.Instance->CCR1 = 0;
 }
 
+void StepperMotor::setDirection(Direction direction) {
+    if (direction == Direction::UP) {
+        HAL_GPIO_WritePin(GPIOB, Stepper_DIR_Pin, GPIO_PIN_SET);
+    } else {
+        HAL_GPIO_WritePin(GPIOB, Stepper_DIR_Pin, GPIO_PIN_RESET);
+    }
+}
+
+void StepperMotor::setSpeed(uint32_t speed) {
+    if (speed == 0) {
+        HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_SET);
+
+    } else {
+        htim12.Instance->ARR = speed;
+        htim12.Instance->CCR1 = speed / 2;
+        HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
+        HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_RESET);
+    }
+}
+
 void StepperMotor::work(void) {
 
-    State previous_state = state;
 
+    //edm_state->work_state = EdmWorkState::JOG_DOWN;
+
+    /*
     if (edm_state->button_2_depressed) {
         state = State::JOG_UP;
     } else if (edm_state->button_4_depressed) {
@@ -35,29 +57,34 @@ void StepperMotor::work(void) {
     } else {
         state = State::IDLE;
     }
+    */
 
-    if (state != previous_state) {
+    if (edm_state->work_state != previous_work_state) {
         HAL_TIM_PWM_Stop(&htim12, TIM_CHANNEL_1);
-        if (state == State::IDLE) {
-            HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_SET);
-            htim12.Instance->ARR = 0;
-            htim12.Instance->CCR1 = 0;
+        if (edm_state->work_state == EdmWorkState::IDLE) {
+            setSpeed(0);
 
-        } else if (state == State::JOG_UP) {
-            htim12.Instance->ARR = 50;
-            htim12.Instance->CCR1 = 25;
-            HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
-            HAL_GPIO_WritePin(GPIOB, Stepper_DIR_Pin, GPIO_PIN_RESET);
-            HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_RESET);
+        } else if (edm_state->work_state == EdmWorkState::JOG_UP) {
+            setSpeed(150);
+            setDirection(Direction::UP);
 
-        } else if (state == State::JOG_DOWN) {
-            htim12.Instance->ARR = 50;
-            htim12.Instance->CCR1 = 25;
-            HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
-            HAL_GPIO_WritePin(GPIOB, Stepper_DIR_Pin, GPIO_PIN_SET);
-            HAL_GPIO_WritePin(GPIOB, Stepper_EN_Pin, GPIO_PIN_RESET);
+        } else if (edm_state->work_state == EdmWorkState::JOG_DOWN) {
+            setSpeed(150);
+            setDirection(Direction::DOWN);
+
+        } else if (edm_state->work_state == EdmWorkState::FINDING) {
+            setSpeed(150);
+            setDirection(Direction::DOWN);
+
+        } else if (edm_state->work_state == EdmWorkState::STOP_RETRACT) {
+            setSpeed(150);
+            setDirection(Direction::UP);
+
         }
-        previous_state = state;
+
+
+        previous_work_state = edm_state->work_state;
+        //previous_state = state;
     }
 
     /*

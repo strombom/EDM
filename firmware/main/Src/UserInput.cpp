@@ -16,6 +16,8 @@ const uint32_t UserInput::adc_channels[] = {ADC_CHANNEL_10, ADC_CHANNEL_11, ADC_
 
 UserInput::UserInput(EdmState *_edm_state) {
     edm_state = _edm_state;
+
+    debounce_timeout = 0;
 }
 
 UserInput::~UserInput() {
@@ -23,28 +25,32 @@ UserInput::~UserInput() {
 }
 
 void UserInput::work(void) {
-    if (HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin) == GPIO_PIN_SET) {
-        edm_state->button_1_depressed = false;
-    } else {
-        edm_state->button_1_depressed = true;
-    }
+    if (HAL_GetTick() > debounce_timeout) {
+        if (HAL_GPIO_ReadPin(Button_1_GPIO_Port, Button_1_Pin) == GPIO_PIN_SET) {
+            edm_state->button_1_depressed = false;
+        } else {
+            edm_state->button_1_depressed = true;
+        }
 
-    if (HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin) == GPIO_PIN_SET) {
-        edm_state->button_2_depressed = false;
-    } else {
-        edm_state->button_2_depressed = true;
-    }
+        if (HAL_GPIO_ReadPin(Button_2_GPIO_Port, Button_2_Pin) == GPIO_PIN_SET) {
+            edm_state->button_2_depressed = false;
+        } else {
+            edm_state->button_2_depressed = true;
+        }
 
-    if (HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin) == GPIO_PIN_SET) {
-        edm_state->button_3_depressed = false;
-    } else {
-        edm_state->button_3_depressed = true;
-    }
+        if (HAL_GPIO_ReadPin(Button_3_GPIO_Port, Button_3_Pin) == GPIO_PIN_SET) {
+            edm_state->button_3_depressed = false;
+        } else {
+            edm_state->button_3_depressed = true;
+        }
 
-    if (HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin) == GPIO_PIN_SET) {
-        edm_state->button_4_depressed = false;
-    } else {
-        edm_state->button_4_depressed = true;
+        if (HAL_GPIO_ReadPin(Button_4_GPIO_Port, Button_4_Pin) == GPIO_PIN_SET) {
+            edm_state->button_4_depressed = false;
+        } else {
+            edm_state->button_4_depressed = true;
+        }
+
+        debounce_timeout += 20;
     }
 
     static int adc_channel = 0;
