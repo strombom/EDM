@@ -14,6 +14,8 @@
 
 PowerBoard::PowerBoard(EdmState *_edm_state) {
     edm_state = _edm_state;
+    battery_water_state = BatteryWaterkState::START;
+    battery_water_timeout = 0;
 
     HAL_TIM_Base_Stop(&htim9);
     htim9.Instance->ARR = 100;
@@ -89,6 +91,55 @@ bool t_off_is_running(void) {
     return r;
 }
 
+void PowerBoard::batteryWaterTest(void) {
+
+
+    if (battery_water_state == BatteryWaterkState::START) {
+        battery_water_timeout = HAL_GetTick() + 1000;
+        battery_water_state = BatteryWaterkState::DELAY;
+
+    } else if (battery_water_state == BatteryWaterkState::DELAY) {
+        if (HAL_GetTick() > battery_water_timeout) {
+            battery_water_state = BatteryWaterkState::SPARK_ON;
+        }
+
+    } else if (battery_water_state == BatteryWaterkState::SPARK_ON) {
+        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
+
+        delay_us(10);
+
+
+        if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_SET) {
+            edm_state->short_circuit = false;
+        } else {
+            edm_state->short_circuit = true;
+        }
+
+        delay_us(10);
+        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
+        //HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
+        battery_water_timeout = HAL_GetTick() + 1;
+        battery_water_state = BatteryWaterkState::MEASURE;
+
+    } else if (battery_water_state == BatteryWaterkState::MEASURE) {
+        if (HAL_GetTick() > battery_water_timeout) {
+
+
+            if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_RESET) {
+                edm_state->breakdown = true;
+            } else {
+                edm_state->breakdown = false;
+            }
+
+            //HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
+
+            battery_water_timeout = HAL_GetTick() + 100;
+            battery_water_state = BatteryWaterkState::DELAY;
+        }
+
+    }
+}
+
 void PowerBoard::work(void) {
 
     static uint32_t previous_spark_voltage = 0;
@@ -121,9 +172,13 @@ void PowerBoard::work(void) {
 
     if (edm_state->work_state == EdmWorkState::FINDING) {
 
+        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_SET);
+        delay_us(10);
         if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
             edm_state->work_state = EdmWorkState::FINDING_RETRACT;
         }
+        HAL_GPIO_WritePin(EDM_Output_20V_Enable_GPIO_Port,  EDM_Output_20V_Enable_Pin,  GPIO_PIN_RESET);
+
 
     } else if (edm_state->work_state == EdmWorkState::JOG_DOWN) {
         if (HAL_GPIO_ReadPin(EDM_Short_Circuit_GPIO_Port, EDM_Short_Circuit_Pin) == GPIO_PIN_RESET) {
@@ -132,16 +187,10 @@ void PowerBoard::work(void) {
     }
 
 
+    batteryWaterTest();
 
 
 
-    /*
-	if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_SET) {
-		edm_state->breakdown = false;
-	} else {
-		edm_state->breakdown = true;
-	}
-     */
 
     static uint32_t spark_voltage_count = 0;
 
@@ -160,6 +209,23 @@ void PowerBoard::work(void) {
     } else {
         edm_state->spark_voltage_status = false;
     }
+
+
+
+    return;
+
+
+
+
+
+
+    /*
+	if (HAL_GPIO_ReadPin(EDM_Breakdown_GPIO_Port, EDM_Breakdown_Pin) == GPIO_PIN_SET) {
+		edm_state->breakdown = false;
+	} else {
+		edm_state->breakdown = true;
+	}
+     */
 
 
 

@@ -21,6 +21,19 @@ public:
 
 private:
     EdmState *edm_state;
+
+
+    enum class BatteryWaterkState {
+      START,
+      DELAY,
+      SPARK_ON,
+      MEASURE,
+    };
+    BatteryWaterkState battery_water_state;
+    uint32_t battery_water_timeout;
+
+
+    void batteryWaterTest(void);
 };
 
 #endif /* POWERBOARD_H_ */
